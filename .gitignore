@@ -1,0 +1,54 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+
+# Vite
+.vite/
+
+# Test / Coverage
+coverage/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Local development
+*.local
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Generated files
+*.generated.*

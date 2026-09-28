@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCE8EF"/>
+      <stop offset="1" stop-color="#A8BBC2"/>
+    </linearGradient>
+    <linearGradient id="building" x1="405" y1="115" x2="805" y2="610" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#284D67"/>
+      <stop offset="1" stop-color="#142A3C"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v675H0z"/>
+  <circle cx="936" cy="142" r="66" fill="#F4E5C1" opacity=".8"/>
+  <path d="M0 492h1200v183H0z" fill="#849B8C"/>
+  <path d="M252 595V305l133-90 132 90v290H252Z" fill="#F0EEE7"/>
+  <path d="M385 215v380h132V305l-132-90Z" fill="#DED9CE"/>
+  <path d="M553 595V186l126-72 128 72v409H553Z" fill="url(#building)"/>
+  <path d="M679 114v481h128V186l-128-72Z" fill="#203D53"/>
+  <path d="M582 220h66v57h-66zm0 98h66v57h-66zm0 98h66v57h-66zm124-196h64v57h-64zm0 98h64v57h-64zm0 98h64v57h-64z" fill="#D7E1E3" opacity=".7"/>
+  <path d="M319 347h43v54h-43zm0 91h43v54h-43zm110-91h43v54h-43zm0 91h43v54h-43z" fill="#94AEB5"/>
+  <path d="M0 596h1200" stroke="#F7F5EF" stroke-width="8" opacity=".75"/>
+</svg>
