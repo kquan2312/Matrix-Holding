@@ -1,20 +1,41 @@
 :root {
-  --black: #163343;
+  --black: #132c3a;
   --white: #ffffff;
 
-  --gray-100: #eff7fb;
-  --gray-200: #e3f0f6;
-  --gray-300: #cbdde6;
-  --gray-500: #667c87;
-  --gray-700: #304b58;
+  /* Luxury Muted Pastel Palette */
+  --pastel-mint: #3a7a69;
+  --pastel-mint-bg: #e4f3ed;
+  --pastel-mint-light: #f0f8f5;
+  --pastel-mint-border: #c8e4d9;
 
-  --blue-50: #f5fafc;
-  --blue-100: #e8f3f8;
-  --blue-200: #d4e7f0;
-  --blue-700: #275c75;
-  --blue-900: #12394e;
+  --pastel-blue: #245a76;
+  --pastel-blue-bg: #e2eff6;
+  --pastel-blue-light: #eff6fa;
+  --pastel-blue-border: #c7dfea;
 
-  --border: #dce9ef;
+  --pastel-warm: #8a663e;
+  --pastel-warm-bg: #f8f3eb;
+  --pastel-warm-light: #fcf9f5;
+  --pastel-warm-border: #ead9c3;
+
+  --pastel-lavender-bg: #edeef6;
+
+  /* Grays with soft cool pastel undertone */
+  --gray-100: #edf4f8;
+  --gray-200: #dfeaf1;
+  --gray-300: #c8dce6;
+  --gray-500: #597380;
+  --gray-700: #294452;
+
+  /* Blues harmonized with pastel atmosphere */
+  --blue-50: #f2f7fa;
+  --blue-100: #e3eff5;
+  --blue-200: #cfe2ed;
+  --blue-700: #245a76;
+  --blue-900: #102e3f;
+
+  --border: #d4e4ed;
+  --border-focus: #245a76;
 
   --radius-control: 14px;
   --radius-card: 22px;
@@ -33,5 +54,8 @@
     Arial,
     sans-serif;
 
-  --transition: 0.3s ease;
+  --transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-subtle: 0 4px 18px rgba(19, 44, 58, 0.04);
+  --shadow-card: 0 12px 36px rgba(19, 44, 58, 0.06);
+  --shadow-hover: 0 20px 48px rgba(19, 44, 58, 0.1);
 }

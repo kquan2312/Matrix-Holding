@@ -1,4 +1,4 @@
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, Check, Copy, ExternalLink, X } from "lucide-react";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Container from "../common/Container";
 import { useLanguage } from "../../i18n/LanguageContext";
@@ -6,6 +6,8 @@ import { useLanguage } from "../../i18n/LanguageContext";
 export default function CTA() {
   const { t } = useLanguage();
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+  const [formDataState, setFormDataState] = useState({ name: "", email: "", message: "" });
   const dialogRef = useRef<HTMLDialogElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
 
@@ -34,6 +36,24 @@ export default function CTA() {
     setIsFormOpen(false);
   };
 
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("matrixholding.support@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
+  const handleOpenGmail = () => {
+    const subject = encodeURIComponent(`Matrix Holding - ${formDataState.name || "Liên hệ hợp tác"}`);
+    const body = encodeURIComponent(
+      `${t("Họ và tên")}: ${formDataState.name}\n${t("Email")}: ${formDataState.email}\n\n${formDataState.message}`,
+    );
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=matrixholding.support@gmail.com&su=${subject}&body=${body}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
+
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -50,22 +70,21 @@ export default function CTA() {
   };
 
   return (
-    <section
-      id="contact"
-      className="cta"
-    >
+    <section id="contact" className="cta">
       <Container>
         <div className="cta-inner">
           <div className="cta-content">
-            <span>
-              {t("Hãy kết nối")}
-            </span>
+            <span className="cta-badge">{t("Hãy kết nối")}</span>
 
             <h2>
               <span>{t("Cùng kiến tạo")}</span>
               <br />
               <span>{t("giá trị mới.")}</span>
             </h2>
+
+            <p className="cta-description">
+              {t("Matrix Holding trân trọng những mối quan hệ hợp tác cùng chia sẻ tầm nhìn và hướng tới các giá trị phát triển dài hạn.")}
+            </p>
           </div>
 
           <div className="cta-actions">
@@ -74,19 +93,18 @@ export default function CTA() {
               className="cta-button"
               onClick={openForm}
             >
-              <span>
-                {t("Liên hệ với chúng tôi")}
-              </span>
-
+              <span>{t("Liên hệ với chúng tôi")}</span>
               <ArrowUpRight size={22} />
             </button>
 
-            {/* <a
-              href="mailto:matrixholding.support@gmail.com"
-              className="cta-email"
+            <button
+              type="button"
+              className="cta-copy-email"
+              onClick={handleCopyEmail}
             >
-              matrixholding.support@gmail.com
-            </a> */}
+              {copied ? <Check size={16} /> : <Copy size={16} />}
+              <span>{copied ? t("Đã sao chép email!") : "matrixholding.support@gmail.com"}</span>
+            </button>
           </div>
         </div>
       </Container>
@@ -127,6 +145,8 @@ export default function CTA() {
                 type="text"
                 autoComplete="name"
                 required
+                value={formDataState.name}
+                onChange={(e) => setFormDataState({ ...formDataState, name: e.target.value })}
               />
             </label>
 
@@ -137,19 +157,38 @@ export default function CTA() {
                 type="email"
                 autoComplete="email"
                 required
+                value={formDataState.email}
+                onChange={(e) => setFormDataState({ ...formDataState, email: e.target.value })}
               />
             </label>
           </div>
 
           <label>
             <span>{t("Nội dung")}</span>
-            <textarea name="message" rows={3} required />
+            <textarea
+              name="message"
+              rows={3}
+              required
+              value={formDataState.message}
+              onChange={(e) => setFormDataState({ ...formDataState, message: e.target.value })}
+            />
           </label>
 
-          <button type="submit" className="contact-form-submit">
-            {t("Mở email để gửi")}
-            <ArrowUpRight size={18} />
-          </button>
+          <div className="contact-form-buttons">
+            <button type="submit" className="contact-form-submit">
+              {t("Mở email để gửi")}
+              <ArrowUpRight size={18} />
+            </button>
+
+            <button
+              type="button"
+              className="contact-form-gmail"
+              onClick={handleOpenGmail}
+            >
+              <ExternalLink size={16} />
+              {t("Mở qua Gmail")}
+            </button>
+          </div>
         </form>
       </dialog>
     </section>

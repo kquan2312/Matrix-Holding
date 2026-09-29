@@ -23,6 +23,10 @@ const links = [
     href: "#news",
   },
   {
+    label: "Tuyển dụng",
+    href: "#careers",
+  },
+  {
     label: "Liên hệ",
     href: "#contact",
   },
@@ -66,6 +70,17 @@ export default function Footer() {
                 {t(link.label)}
               </a>
             ))}
+          </div>
+
+          <div className="footer-ecosystem">
+            <span className="footer-title">
+              {t("HỆ SINH THÁI")}
+            </span>
+
+            <span>Matrix Holding</span>
+            <span>Matrix Network</span>
+            <span>Matrix Connect</span>
+            <span>Matrix Ventures</span>
           </div>
 
           <div className="footer-contact">

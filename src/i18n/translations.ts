@@ -85,6 +85,13 @@ const englishTranslations: Record<string, string> = {
   "Dịch vụ doanh nghiệp": "Business services",
   "Lĩnh vực mẫu tập trung vào giải pháp vận hành và dịch vụ hỗ trợ cho doanh nghiệp trong hệ sinh thái.":
     "A sample sector focused on operating solutions and support services for businesses in the ecosystem.",
+  "Công nghệ": "Technology",
+  "Tài chính": "Finance",
+  "Tiêu dùng & bán lẻ": "Consumer & retail",
+  "Du lịch & lưu trú": "Travel & hospitality",
+  "Logistics": "Logistics",
+  "Giáo dục": "Education",
+  "Y tế & sức khỏe": "Healthcare",
   "Các lĩnh vực kinh doanh đang được cập nhật": "Business sectors are coming soon",
   "Hệ sinh thái Matrix Holding sẽ được giới thiệu chi tiết trong thời gian tới.":
     "More details about the Matrix Holding ecosystem will be shared soon.",
@@ -211,6 +218,65 @@ const englishTranslations: Record<string, string> = {
   "Tin mẫu": "Sample news",
   "Những câu chuyện mới nhất về Matrix Holding sẽ được cập nhật.":
     "The latest Matrix Holding stories are coming soon.",
+  "Cơ hội nghề nghiệp": "Career opportunities",
+  "Tuyển dụng": "Careers",
+  "Cùng phát triển": "Grow with",
+  "với Matrix Holding.": "Matrix Holding.",
+  "Khám phá các vị trí định hướng theo từng lĩnh vực trong hệ sinh thái Matrix Holding.":
+    "Explore sample roles across the sectors in the Matrix Holding ecosystem.",
+  "vị trí tuyển dụng chính thức": "official job openings",
+  "Hiện chưa có tin tuyển dụng chính thức đang mở. Thông tin vị trí và yêu cầu dưới đây cần được xác nhận trước khi công bố tuyển dụng.":
+    "There are no official job openings at this time. Role and requirement details below must be confirmed before any position is announced.",
+  "Lọc theo lĩnh vực": "Filter by sector",
+  "Tất cả lĩnh vực": "All sectors",
+  "Xem chi tiết": "View details",
+  "Mô tả công việc": "Responsibilities",
+  "Yêu cầu ứng viên": "Requirements",
+  "Đóng chi tiết tuyển dụng": "Close job details",
+  "Quay lại chi tiết": "Back to job details",
+  "Ứng tuyển vị trí": "Apply for",
+  "Số điện thoại": "Phone number",
+  "Tải CV (PDF)": "Upload CV (PDF)",
+  "Chỉ chấp nhận tệp PDF.": "PDF files only.",
+  "Lời nhắn": "Message",
+  "Gửi hồ sơ ứng tuyển": "Submit application",
+  "Ứng tuyển": "Apply",
+  "Form hiện chưa kết nối dịch vụ gửi hồ sơ. Bạn có thể xem và điền thử thông tin; hồ sơ sẽ chưa được gửi đi.":
+    "This form is not connected to an application service yet. You can review and fill it in, but your application will not be sent.",
+  "Biểu mẫu chưa được kết nối với hệ thống nhận hồ sơ nên thông tin chưa được gửi. Vui lòng quay lại sau khi hệ thống tuyển dụng được kích hoạt.":
+    "This form is not connected to an application system, so your information has not been sent. Please return when the careers system is enabled.",
+  "Quan tâm đến cơ hội nghề nghiệp?": "Interested in career opportunities?",
+  "Kết nối với Matrix Holding": "Get in touch with Matrix Holding",
+  "Chuyên viên Phát triển dự án": "Project Development Specialist",
+  "Hỗ trợ nghiên cứu thị trường, đánh giá cơ hội và phối hợp các bước chuẩn bị dự án bất động sản.":
+    "Support market research, opportunity assessment, and coordination of real estate project preparation.",
+  "Chuyên viên Phân tích đầu tư": "Investment Analyst",
+  "Tổng hợp dữ liệu ngành, phân tích cơ hội và hỗ trợ xây dựng đề xuất đầu tư cho các mô hình tiềm năng.":
+    "Compile sector data, analyze opportunities, and support investment proposals for promising business models.",
+  "Chuyên viên Sản phẩm số": "Digital Product Specialist",
+  "Kết nối nhu cầu người dùng với đội ngũ kỹ thuật để cải thiện nền tảng số và quy trình vận hành.":
+    "Connect user needs with technical teams to improve digital platforms and operating processes.",
+  "Chuyên viên Phân tích tài chính": "Financial Analyst",
+  "Hỗ trợ phân tích số liệu, lập báo cáo và đánh giá hiệu quả tài chính trong hoạt động đầu tư.":
+    "Support data analysis, reporting, and financial performance reviews for investment activities.",
+  "Chuyên viên Phát triển kinh doanh ngành hàng": "Category Business Development Specialist",
+  "Nghiên cứu xu hướng tiêu dùng và hỗ trợ phát triển sản phẩm, thương hiệu cùng các kênh phân phối.":
+    "Research consumer trends and support product, brand, and distribution channel development.",
+  "Chuyên viên Vận hành dịch vụ lưu trú": "Hospitality Operations Specialist",
+  "Phối hợp hoạt động dịch vụ, theo dõi chất lượng vận hành và góp phần hoàn thiện trải nghiệm khách hàng.":
+    "Coordinate service operations, monitor quality, and help improve the customer experience.",
+  "Chuyên viên Điều phối chuỗi cung ứng": "Supply Chain Coordinator",
+  "Hỗ trợ điều phối vận chuyển, kho vận và phối hợp với các đối tác trong chuỗi cung ứng.":
+    "Support transportation and warehousing coordination and work with supply chain partners.",
+  "Chuyên viên Phát triển chương trình đào tạo": "Learning Program Development Specialist",
+  "Tìm hiểu nhu cầu học tập và hỗ trợ xây dựng nội dung, chương trình đào tạo phù hợp với người học.":
+    "Research learning needs and support the development of relevant learning content and training programs.",
+  "Chuyên viên Phát triển dịch vụ sức khỏe": "Healthcare Services Development Specialist",
+  "Nghiên cứu nhu cầu khách hàng và hỗ trợ phát triển mô hình dịch vụ chăm sóc sức khỏe.":
+    "Research customer needs and support the development of healthcare service models.",
+  "Chuyên viên Giải pháp doanh nghiệp": "Business Solutions Specialist",
+  "Tìm hiểu bài toán vận hành của doanh nghiệp và phối hợp đề xuất giải pháp dịch vụ phù hợp.":
+    "Understand business operating challenges and help propose suitable service solutions.",
   "Cùng kiến tạo giá trị mới.": "Let's build new value together.",
   "Cùng kiến tạo": "Let's build",
   "giá trị mới.": "new value.",
@@ -229,6 +295,14 @@ const englishTranslations: Record<string, string> = {
   "KĐT Bắc Linh Đàm, Phường Hoàng Liệt, Hà Nội":
     "Bac Linh Dam Urban Area, Hoang Liet Ward, Hanoi",
   "Tập đoàn kinh doanh đa ngành": "Diversified business group",
+  "Liên hệ hợp tác": "Contact & Partnerships",
+  "Hệ sinh thái đa ngành": "Diversified Ecosystem",
+  "Định hướng bền vững": "Sustainable Vision",
+  "Mở qua Gmail": "Open in Gmail",
+  "Sao chép Email": "Copy Email",
+  "Đã sao chép email!": "Email copied!",
+  "Trụ sở chính": "Headquarters",
+  "Kiến tạo tương lai": "Shaping the future",
 };
 
 export function translate(text: string, language: Language): string {

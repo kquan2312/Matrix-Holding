@@ -12,6 +12,7 @@ import Leadership from "../components/sections/Leadership";
 import Partners from "../components/sections/Partners";
 import PartnerFeedback from "../components/sections/PartnerFeedback";
 import News from "../components/sections/News";
+import Careers from "../components/sections/Careers";
 import CTA from "../components/sections/CTA";
 import GroupScale from "../components/sections/GroupScale";
 import useScrollReveal from "../hooks/useScrollReveal";
@@ -47,6 +48,8 @@ export default function Home() {
         <PartnerFeedback />
 
         <News />
+
+        <Careers />
 
         <CTA />
       </main>

@@ -24,21 +24,41 @@ const navItems = [
     label: "Tin tức",
     href: "#news",
   },
+  {
+    label: "Tuyển dụng",
+    href: "#careers",
+  },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
   const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
+
+      const sectionIds = navItems.map((item) => item.href.replace("#", ""));
+      const scrollPosition = window.scrollY + 140;
+
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const id = sectionIds[i];
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollPosition) {
+          setActiveSection(`#${id}`);
+          return;
+        }
+      }
+      if (window.scrollY < 200) {
+        setActiveSection("");
+      }
     };
 
     handleScroll();
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -83,6 +103,7 @@ export default function Header() {
               <a
                 key={item.href}
                 href={item.href}
+                className={activeSection === item.href ? "is-active" : ""}
               >
                 {t(item.label)}
               </a>
@@ -92,7 +113,7 @@ export default function Header() {
           <div className="header-actions">
             <a
               href="#contact"
-              className="header-contact"
+              className={`header-contact ${activeSection === "#contact" ? "is-active" : ""}`}
             >
               <span>{t("Liên hệ")}</span>
               <ArrowUpRight size={16} />
@@ -153,6 +174,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
+              className={activeSection === item.href ? "is-active" : ""}
               onClick={closeMenu}
             >
               <span>
@@ -167,7 +189,7 @@ export default function Header() {
             href="#contact"
             onClick={closeMenu}
           >
-            <span>06</span>
+            <span>{String(navItems.length + 1).padStart(2, "0")}</span>
             {t("Liên hệ")}
           </a>
         </nav>
