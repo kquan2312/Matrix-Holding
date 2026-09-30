@@ -1,9 +1,65 @@
 import Container from "../common/Container";
 import { groupStats } from "../../data/groupStats";
 import { useLanguage } from "../../i18n/LanguageContext";
+import { useEffect, useRef, useState } from "react";
 
 export default function GroupScale() {
   const { t } = useLanguage();
+  const statsRef = useRef<HTMLDivElement>(null);
+
+const [started, setStarted] = useState(false);
+
+const [animatedValues, setAnimatedValues] = useState(
+  groupStats.map(() => 0)
+);
+
+useEffect(() => {
+  const element = statsRef.current;
+
+  if (!element) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setStarted(true);
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.35 }
+  );
+
+  observer.observe(element);
+
+  return () => observer.disconnect();
+}, []);
+
+useEffect(() => {
+  if (!started) return;
+
+  const duration = 1400;
+  const startTime = performance.now();
+
+  const animate = (currentTime: number) => {
+    const progress = Math.min(
+      (currentTime - startTime) / duration,
+      1
+    );
+
+    const eased = 1 - Math.pow(1 - progress, 3);
+
+    setAnimatedValues(
+      groupStats.map((stat) =>
+        Math.floor(Number(stat.value) * eased)
+      )
+    );
+
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    }
+  };
+
+  requestAnimationFrame(animate);
+}, [started]);
 
   return (
     <section className="section group-scale section-border">
@@ -24,7 +80,7 @@ export default function GroupScale() {
           </p>
         </div>
 
-        <div className="group-stats">
+        <div className="group-stats" ref={statsRef}>
           {groupStats.map((stat, index) => (
             <article className="group-stat" key={stat.id}>
               <span className="group-stat-index">
@@ -40,7 +96,8 @@ export default function GroupScale() {
               </div>
 
               <span className="group-stat-status">
-                {t(stat.value)}
+                {/* {t(stat.value)} */}
+                {animatedValues[index]}+
               </span>
             </article>
           ))}

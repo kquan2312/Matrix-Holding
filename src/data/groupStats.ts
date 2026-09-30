@@ -3,26 +3,26 @@ import type { GroupStat } from "../types";
 export const groupStats: GroupStat[] = [
   {
     id: "countries",
-    value: "Đang mở rộng",
+    value: "5",
     label: "Quốc gia",
     description: "Phạm vi hoạt động",
   },
   {
     id: "employees",
-    value: "Đa ngành",
+    value: "10000",
     label: "Nhân sự",
     description: "Đội ngũ trên toàn hệ sinh thái",
   },
   {
     id: "companies",
-    value: "Liên kết",
-    label: "Công ty thành viên",
+    value: "50",
+    label: "Công ty",
     description: "Các đơn vị trong hệ sinh thái",
   },
   {
     id: "industries",
-    value: "Dài hạn",
+    value: "10",
     label: "Lĩnh vực",
-    description: "Các ngành kinh doanh trọng tâm",
+    description: "Các ngành trọng tâm",
   },
 ];
