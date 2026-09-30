@@ -22,13 +22,19 @@ export default function Introduction() {
           </h2>
 
           <div className="introduction-copy">
-            <p className="intro-lead">
-              {t("Matrix Holding được định hướng là một tập đoàn kinh doanh đa ngành, nơi các lĩnh vực cùng phát triển trong một hệ sinh thái có tính kết nối và cộng hưởng.")}
-            </p>
+            <div className="introduction-point">
+              <h3>{t("Chúng tôi là ai?")}</h3>
+              <p className="intro-lead">
+                {t("Matrix Holding là tập đoàn đầu tư và phát triển hệ sinh thái kinh doanh đa ngành tại Việt Nam, kết nối các doanh nghiệp và nguồn lực cùng hướng tới tăng trưởng dài hạn.")}
+              </p>
+            </div>
 
-            <p>
-              {t("Chúng tôi tập trung xây dựng nền tảng vận hành linh hoạt, phát triển những lĩnh vực có tiềm năng dài hạn và kết nối nguồn lực để tạo ra giá trị bền vững.")}
-            </p>
+            <div className="introduction-point">
+              <h3>{t("Chúng tôi làm gì?")}</h3>
+              <p>
+                {t("Chúng tôi nghiên cứu cơ hội, xây dựng định hướng phát triển và kết nối doanh nghiệp với nguồn lực, chuyên môn và đối tác phù hợp để hỗ trợ hệ sinh thái phát triển.")}
+              </p>
+            </div>
 
             <a href="#business" className="text-link">
               {t("Khám phá hệ sinh thái")}

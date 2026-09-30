@@ -53,6 +53,42 @@ export default function Ecosystem() {
           </p>
         </div>
 
+        <div className="ecosystem-structure">
+          <h3>{t("Cấu trúc hệ sinh thái")}</h3>
+
+          <div className="ecosystem-orbit">
+            <svg
+              className="ecosystem-orbit-lines"
+              viewBox="0 0 720 430"
+              fill="none"
+              aria-hidden="true"
+            >
+              <ellipse cx="360" cy="215" rx="320" ry="175" />
+              <path d="M360 215V65M360 215 110 345M360 215l250 130" />
+            </svg>
+
+            <div className="ecosystem-entity ecosystem-entity-holding">
+              <span>{t("Tập đoàn trung tâm")}</span>
+              <strong>Matrix Holding</strong>
+            </div>
+
+            <ul className="ecosystem-entity-list">
+              <li className="ecosystem-entity ecosystem-entity-network">
+                <span>{t("Đơn vị thành viên")}</span>
+                <strong>Matrix Network</strong>
+              </li>
+              <li className="ecosystem-entity ecosystem-entity-connect">
+                <span>{t("Đơn vị thành viên")}</span>
+                <strong>Matrix Connect</strong>
+              </li>
+              <li className="ecosystem-entity ecosystem-entity-ventures">
+                <span>{t("Đơn vị thành viên")}</span>
+                <strong>Matrix Ventures</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div className="ecosystem-grid">
           {ecosystemItems.map((item) => (
             <article key={item.number}>

@@ -21,10 +21,12 @@ const englishTranslations: Record<string, string> = {
   "Một hệ sinh thái": "One ecosystem",
   "Nhiều lĩnh vực.": "Many industries.",
   "Một tầm nhìn.": "One vision.",
-  "Matrix Holding được định hướng là một tập đoàn kinh doanh đa ngành, nơi các lĩnh vực cùng phát triển trong một hệ sinh thái có tính kết nối và cộng hưởng.":
-    "Matrix Holding is envisioned as a diversified business group where multiple industries grow together in a connected, synergistic ecosystem.",
-  "Chúng tôi tập trung xây dựng nền tảng vận hành linh hoạt, phát triển những lĩnh vực có tiềm năng dài hạn và kết nối nguồn lực để tạo ra giá trị bền vững.":
-    "We focus on building a flexible operating platform, developing industries with long-term potential, and connecting resources to create sustainable value.",
+  "Chúng tôi là ai?": "Who are we?",
+  "Matrix Holding là tập đoàn đầu tư và phát triển hệ sinh thái kinh doanh đa ngành tại Việt Nam, kết nối các doanh nghiệp và nguồn lực cùng hướng tới tăng trưởng dài hạn.":
+    "Matrix Holding is a Vietnam-based investment group developing a diversified business ecosystem and connecting companies and resources for long-term growth.",
+  "Chúng tôi làm gì?": "What do we do?",
+  "Chúng tôi nghiên cứu cơ hội, xây dựng định hướng phát triển và kết nối doanh nghiệp với nguồn lực, chuyên môn và đối tác phù hợp để hỗ trợ hệ sinh thái phát triển.":
+    "We research opportunities, shape growth strategies, and connect businesses with relevant resources, expertise, and partners to support the ecosystem.",
   "Khám phá hệ sinh thái": "Explore our ecosystem",
   "Hệ sinh thái": "Ecosystem",
   "Tiềm năng phát triển": "Growth potential",
@@ -54,6 +56,9 @@ const englishTranslations: Record<string, string> = {
   "Triết lý phát triển": "Our approach",
   "Liên kết": "Connected",
   "Cộng hưởng.": "Together.",
+  "Cấu trúc hệ sinh thái": "Ecosystem structure",
+  "Tập đoàn trung tâm": "Parent company",
+  "Đơn vị thành viên": "Ecosystem company",
   "Một tập đoàn không chỉ được tạo nên bởi những doanh nghiệp riêng lẻ, mà bởi khả năng kết nối các nguồn lực thành một hệ sinh thái có sức mạnh lớn hơn tổng của từng thành phần.":
     "A group is more than a collection of separate businesses. Its strength comes from connecting resources into an ecosystem greater than the sum of its parts.",
   "Phát triển nhiều lĩnh vực kinh doanh có tiềm năng, tạo nền tảng tăng trưởng đa chiều.":
