@@ -7,12 +7,14 @@ import GroupScale from "../components/sections/GroupScale";
 import History from "../components/sections/History";
 import AboutFaq from "../components/sections/AboutFaq";
 import WorkProcess from "../components/sections/WorkProcess";
+import VisionMission from "../components/sections/VisionMission";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Introduction />
+      <VisionMission />
       <AboutFaq />
       <GroupScale />
       <History />

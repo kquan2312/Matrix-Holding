@@ -1,24 +1,28 @@
+import { Compass, Handshake, Lightbulb } from "lucide-react";
 import Container from "../common/Container";
 import { useLanguage } from "../../i18n/LanguageContext";
 
 const values = [
   {
-    number: "01",
-    title: "Tầm nhìn",
+    eyebrow: "SỨ MỆNH DOANH NGHIỆP",
+    title: "Kiến tạo nền tảng để doanh nghiệp tiếp cận, mở ra cơ hội hợp tác và phát triển vượt trội.",
     description:
-      "Xây dựng Matrix Holding thành hệ sinh thái kinh doanh đa ngành có khả năng phát triển bền vững và tạo giá trị dài hạn.",
+      "Matrix Holding mang trong mình sứ mệnh dẫn dắt, định hướng và đồng hành cùng thế hệ trẻ trên hành trình khởi nghiệp, giúp họ mở ra cơ hội để trở thành những kỳ lân trong tương lai.",
+    Icon: Handshake,
   },
   {
-    number: "02",
-    title: "Sứ mệnh",
+    eyebrow: "TẦM NHÌN CHIẾN LƯỢC",
+    title: "Trở thành doanh nghiệp kiến tạo hệ sinh thái kinh doanh hàng đầu tại Việt Nam.",
     description:
-      "Kết nối con người, nguồn lực và công nghệ để mở rộng cơ hội phát triển cho các lĩnh vực kinh doanh.",
+      "Matrix Holding hướng đến việc xây dựng hệ sinh thái kinh doanh đa ngành có khả năng tạo ra giá trị thiết thực, nơi các ý tưởng kinh doanh được ươm mầm, nuôi dưỡng và phát triển.",
+    Icon: Compass,
   },
   {
-    number: "03",
-    title: "Giá trị cốt lõi",
+    eyebrow: "GIÁ TRỊ CỐT LÕI",
+    title: "Ươm mầm và hiện thực hóa ý tưởng kinh doanh tiềm năng cùng thế hệ doanh nhân trẻ khởi nghiệp.",
     description:
-      "Đề cao tinh thần hợp tác, tư duy đổi mới và cam kết đồng hành trong từng chặng đường phát triển.",
+      "Matrix Holding tạo điều kiện để các ý tưởng kinh doanh được định hình, thử nghiệm và phát triển thành những mô hình thực tế thông qua hệ sinh thái kinh doanh đa ngành.",
+    Icon: Lightbulb,
   },
 ];
 
@@ -31,29 +35,25 @@ export default function VisionMission() {
       className="section vision-mission section-border"
     >
       <Container>
-        <div className="section-label">
-          <span>07</span>
-          <span>{t("Tầm nhìn & sứ mệnh")}</span>
-        </div>
-
-        <div className="ecosystem-intro">
-          <h2>
-            {t("Phát triển hôm nay.")}
-            <br />
-            {t("Kiến tạo giá trị dài hạn.")}
-          </h2>
-
-          <p>
-            {t("Tầm nhìn, sứ mệnh và giá trị cốt lõi định hướng cách Matrix Holding kết nối các lĩnh vực, phát triển đội ngũ và tạo dựng hệ sinh thái bền vững.")}
-          </p>
+        <div className="vision-mission-heading">
+          <span>{t("NỀN TẢNG PHÁT TRIỂN")}</span>
+          <h2>{t("Sứ mệnh, tầm nhìn và giá trị cốt lõi.")}</h2>
+          <p>{t("Những định hướng nhất quán để Matrix Holding kiến tạo giá trị lâu dài cho doanh nghiệp và cộng đồng.")}</p>
         </div>
 
         <div className="values-grid">
-          {values.map((value) => (
-            <article key={value.number}>
-              <span>{value.number}</span>
-              <h3>{t(value.title)}</h3>
-              <p>{t(value.description)}</p>
+          {values.map(({ eyebrow, title, description, Icon }, index) => (
+            <article key={eyebrow}>
+              <div className="values-card-eyebrow">
+                <span className="values-card-icon">
+                  <Icon size={22} aria-hidden="true" />
+                </span>
+                <span>
+                  {String(index + 1).padStart(2, "0")} · {t(eyebrow)}
+                </span>
+              </div>
+              <h3>{t(title)}</h3>
+              <p>{t(description)}</p>
             </article>
           ))}
         </div>

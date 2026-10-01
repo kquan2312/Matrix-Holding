@@ -226,6 +226,25 @@ const englishTranslations: Record<string, string> = {
   "Kết nối doanh nghiệp, đối tác, nhân sự và nguồn lực để tạo ra những giá trị cộng hưởng trong hệ sinh thái.":
     "Connecting businesses, partners, people, and resources to create synergies across the ecosystem.",
   "Tầm nhìn & sứ mệnh": "Vision & mission",
+  "NỀN TẢNG PHÁT TRIỂN": "FOUNDATION FOR GROWTH",
+  "Sứ mệnh, tầm nhìn và giá trị cốt lõi.": "Mission, vision, and core values.",
+  "Những định hướng nhất quán để Matrix Holding kiến tạo giá trị lâu dài cho doanh nghiệp và cộng đồng.":
+    "Consistent principles that guide Matrix Holding in creating lasting value for businesses and communities.",
+  "SỨ MỆNH DOANH NGHIỆP": "OUR MISSION",
+  "TẦM NHÌN CHIẾN LƯỢC": "OUR STRATEGIC VISION",
+  "GIÁ TRỊ CỐT LÕI": "OUR CORE VALUES",
+  "Kiến tạo nền tảng để doanh nghiệp tiếp cận, mở ra cơ hội hợp tác và phát triển vượt trội.":
+    "Building a foundation for businesses to connect, collaborate, and grow.",
+  "Matrix Holding mang trong mình sứ mệnh dẫn dắt, định hướng và đồng hành cùng thế hệ trẻ trên hành trình khởi nghiệp, giúp họ mở ra cơ hội để trở thành những kỳ lân trong tương lai.":
+    "Matrix Holding is committed to guiding and supporting young entrepreneurs on their startup journey, helping them pursue the opportunity to become tomorrow's industry leaders.",
+  "Trở thành doanh nghiệp kiến tạo hệ sinh thái kinh doanh hàng đầu tại Việt Nam.":
+    "To become a leading business ecosystem builder in Vietnam.",
+  "Matrix Holding hướng đến việc xây dựng hệ sinh thái kinh doanh đa ngành có khả năng tạo ra giá trị thiết thực, nơi các ý tưởng kinh doanh được ươm mầm, nuôi dưỡng và phát triển.":
+    "Matrix Holding aims to build a diversified business ecosystem that creates meaningful value, where business ideas can be nurtured and developed.",
+  "Ươm mầm và hiện thực hóa ý tưởng kinh doanh tiềm năng cùng thế hệ doanh nhân trẻ khởi nghiệp.":
+    "Nurturing and realizing promising business ideas alongside a new generation of entrepreneurs.",
+  "Matrix Holding tạo điều kiện để các ý tưởng kinh doanh được định hình, thử nghiệm và phát triển thành những mô hình thực tế thông qua hệ sinh thái kinh doanh đa ngành.":
+    "Matrix Holding helps shape, test, and develop business ideas into practical models through its diversified business ecosystem.",
   "Phát triển hôm nay.": "Growing today.",
   "Kiến tạo giá trị dài hạn.": "Creating lasting value.",
   "Tầm nhìn, sứ mệnh và giá trị cốt lõi định hướng cách Matrix Holding kết nối các lĩnh vực, phát triển đội ngũ và tạo dựng hệ sinh thái bền vững.":
