@@ -748,7 +748,7 @@ Không bỏ qua lỗi TypeScript chỉ để chạy được development server.
 
 ---
 
-# 23. Static Hosting Routes
+## Static Hosting Routes
 
 Các trang con được xử lý bởi ứng dụng React sau khi `index.html` được tải. Vì vậy, hosting cần trả `index.html` khi người dùng mở trực tiếp hoặc refresh một đường dẫn như `/he-sinh-thai`.
 
