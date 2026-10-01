@@ -12,7 +12,7 @@ Giao diện được xây dựng theo hướng **corporate / premium / modern**,
 * Tuyển dụng: `/tuyen-dung`
 * Liên hệ: `/lien-he`
 
-Khi triển khai trên hosting tĩnh, cấu hình rewrite các đường dẫn trên về `index.html` để có thể truy cập trực tiếp và tải lại từng trang.
+Các đường dẫn trên dùng client-side routing. Cấu hình fallback trong `vercel.json` và `public/_redirects` giúp truy cập trực tiếp hoặc tải lại trang con trên Vercel, Netlify và Cloudflare Pages.
 
 ---
 
@@ -745,6 +745,17 @@ npm run build
 Build phải hoàn thành không có TypeScript/Vite error.
 
 Không bỏ qua lỗi TypeScript chỉ để chạy được development server.
+
+---
+
+# 23. Static Hosting Routes
+
+Các trang con được xử lý bởi ứng dụng React sau khi `index.html` được tải. Vì vậy, hosting cần trả `index.html` khi người dùng mở trực tiếp hoặc refresh một đường dẫn như `/he-sinh-thai`.
+
+- **Vercel:** `vercel.json` cấu hình rewrite về `/index.html`.
+- **Netlify và Cloudflare Pages:** `public/_redirects` được Vite chép vào thư mục build (`dist/_redirects`) và cấu hình fallback về `/index.html`.
+
+Giữ các tệp này ở đúng vị trí và deploy thư mục `dist` sau khi chạy `npm run build`. Các tệp tĩnh có sẵn vẫn được phục vụ bình thường; fallback chỉ dùng cho các đường dẫn không khớp tệp.
 
 ---
 
