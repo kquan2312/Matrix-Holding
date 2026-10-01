@@ -12,6 +12,7 @@ export const news: NewsItem[] = [
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
     date: "28.09.2026",
     category: "Định hướng phát triển",
+    brand: "network",
   },
 
   {
@@ -24,6 +25,7 @@ export const news: NewsItem[] = [
       "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=85",
     date: "15.09.2026",
     category: "Hệ sinh thái",
+    brand: "community",
   },
 
   {
@@ -36,6 +38,7 @@ export const news: NewsItem[] = [
       "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=85",
     date: "01.09.2026",
     category: "Góc nhìn",
+    brand: "network",
   },
 
   {
@@ -48,6 +51,7 @@ export const news: NewsItem[] = [
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85",
     date: "18.08.2026",
     category: "Phát triển bền vững",
+    brand: "capital",
   },
 
   {
@@ -60,6 +64,7 @@ export const news: NewsItem[] = [
       "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85",
     date: "05.08.2026",
     category: "Con người",
+    brand: "community",
   },
 
   {
@@ -72,5 +77,6 @@ export const news: NewsItem[] = [
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85",
     date: "22.07.2026",
     category: "Góc nhìn",
+    brand: "capital",
   },
 ];

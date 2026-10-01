@@ -22,16 +22,74 @@ const englishTranslations: Record<string, string> = {
   "Nhiều lĩnh vực.": "Many industries.",
   "Một tầm nhìn.": "One vision.",
   "Chúng tôi là ai?": "Who are we?",
-  "Matrix Holding là tập đoàn đầu tư và phát triển hệ sinh thái kinh doanh đa ngành tại Việt Nam, kết nối các doanh nghiệp và nguồn lực cùng hướng tới tăng trưởng dài hạn.":
-    "Matrix Holding is a Vietnam-based investment group developing a diversified business ecosystem and connecting companies and resources for long-term growth.",
+  "Matrix Holding là doanh nghiệp hoạt động trong lĩnh vực đầu tư và phát triển hệ sinh thái kinh doanh đa ngành tại Việt Nam. Hướng đến mục tiêu đưa các doanh nghiệp tiềm năng trở thành kỳ lân trong lĩnh vực, chúng tôi cam kết sẽ không ngừng nỗ lực, phát huy sự sáng tạo nhằm đưa ra giải pháp phù hợp với nhu cầu của từng doanh nghiệp.":
+  "Matrix Holding is a Vietnam-based investment group developing a diversified business ecosystem and connecting companies and resources for long-term growth.",
   "Chúng tôi làm gì?": "What do we do?",
-  "Chúng tôi nghiên cứu cơ hội, xây dựng định hướng phát triển và kết nối doanh nghiệp với nguồn lực, chuyên môn và đối tác phù hợp để hỗ trợ hệ sinh thái phát triển.":
-    "We research opportunities, shape growth strategies, and connect businesses with relevant resources, expertise, and partners to support the ecosystem.",
+  "Chúng tôi tập trung xây dựng một môi trường kinh doanh hiệu quả, nơi các doanh nghiệp có thể tiếp cận với nhiều nguồn lực và mở ra cơ hội tiếp cận thị trường bền vững.":
+  "We focus on building an effective business environment where companies can access resources and open up opportunities for sustainable market access.",
+  "CÂU HỎI THƯỜNG GẶP": "FREQUENTLY ASKED QUESTIONS",
+  "Giải đáp về Matrix Holding": "Answers about Matrix Holding",
+  "Không gian và định hướng phát triển của Matrix Holding":
+    "Matrix Holding's space and development vision",
+  "Matrix Holding là doanh nghiệp gì?":
+    "What kind of company is Matrix Holding?",
+  "Matrix Holding hoạt động trong lĩnh vực đầu tư và phát triển hệ sinh thái kinh doanh đa ngành tại Việt Nam, kết nối doanh nghiệp với nguồn lực và cơ hội phát triển.":
+    "Matrix Holding operates in investment and the development of a diversified business ecosystem in Vietnam, connecting companies with resources and growth opportunities.",
+  "Matrix Holding hoạt động trong những lĩnh vực nào?":
+    "Which sectors does Matrix Holding operate in?",
+  "Hệ sinh thái định hướng phát triển nhiều lĩnh vực như bất động sản, đầu tư, công nghệ, tài chính, tiêu dùng, du lịch, logistics, giáo dục, y tế và dịch vụ doanh nghiệp.":
+    "The ecosystem aims to develop across sectors including real estate, investment, technology, finance, consumer, travel, logistics, education, healthcare, and business services.",
+  "Matrix Holding cung cấp sản phẩm, dịch vụ gì?":
+    "What products and services does Matrix Holding offer?",
+  "Matrix Holding phát triển hệ sinh thái các đơn vị và cộng đồng hỗ trợ doanh nghiệp, bao gồm kết nối dịch vụ, kết nối kinh doanh và kết nối đầu tư.":
+    "Matrix Holding develops an ecosystem of companies and communities that support businesses through service, business, and investment connections.",
+  "Matrix Holding được thành lập khi nào?":
+    "When was Matrix Holding established?",
+  "Theo hành trình phát triển được giới thiệu, Matrix Holding bắt đầu hoạt động kinh doanh từ năm 2020 và chuẩn hóa nền tảng pháp lý vào năm 2023.":
+    "According to the published company timeline, Matrix Holding began business operations in 2020 and established its legal foundation in 2023.",
+  "Chủ tịch của Matrix Holding là ai?":
+    "Who is the chairman of Matrix Holding?",
+  "Thông tin về Chủ tịch chưa được công bố trong nội dung chính thức hiện có. Matrix Holding sẽ cập nhật khi có thông tin xác nhận.":
+    "The chairman's details have not been published in the currently available official information. Matrix Holding will update this when confirmed.",
   "Khám phá hệ sinh thái": "Explore our ecosystem",
   "Hệ sinh thái": "Ecosystem",
   "Tiềm năng phát triển": "Growth potential",
   "Định hướng phát triển": "Growth outlook",
   "Quy mô tập đoàn": "Group at a glance",
+  "LỊCH SỬ HÌNH THÀNH": "OUR HISTORY",
+  "Hành trình của Matrix Holding": "The Matrix Holding journey",
+  "Chọn từng cột mốc để xem những dấu ấn quan trọng trên hành trình phát triển.":
+    "Select a milestone to explore key moments in our development.",
+  "Các cột mốc lịch sử": "Historical milestones",
+  "Khởi nguồn sáng tạo": "The beginning of a creative journey",
+  "Những ý tưởng đầu tiên đặt nền móng cho hành trình phát triển của Matrix Holding.":
+    "The first ideas laid the foundation for Matrix Holding's journey.",
+  "Bước vào hoạt động kinh doanh": "Beginning business operations",
+  "Matrix Holding bắt đầu các hoạt động kinh doanh, trở thành đơn vị cung cấp dịch vụ truyền thông mạng xã hội.":
+    "Matrix Holding began business operations as a social media communications service provider.",
+  "Chuẩn hóa nền tảng pháp lý": "Establishing a legal foundation",
+  "Hoàn thiện nền tảng pháp lý, tạo cơ sở cho hoạt động và định hướng phát triển dài hạn.":
+    "Establishing a legal foundation for operations and long-term development.",
+  "Tái cấu trúc nguồn lực": "Restructuring resources",
+  "Tái cấu trúc nguồn lực để tăng cường sự kết nối và năng lực phối hợp trong hệ sinh thái.":
+    "Restructuring resources to strengthen connections and coordination across the ecosystem.",
+  "Mở rộng hệ sinh thái": "Expanding the ecosystem",
+  "Tiếp tục mở rộng hệ sinh thái, kết nối thêm lĩnh vực, nguồn lực và cơ hội hợp tác.":
+    "Continuing to expand the ecosystem by connecting more sectors, resources, and opportunities.",
+  "CỘT MỐC": "MILESTONE",
+  "Đội ngũ Matrix Holding cùng xây dựng định hướng phát triển":
+    "The Matrix Holding team shaping its growth strategy",
+  "Quy trình làm việc": "How we work",
+  "Đồng hành theo một quy trình rõ ràng": "A clear process, every step of the way",
+  "Tiếp nhận nhu cầu": "Understanding your needs",
+  "Tiếp nhận thông tin dựa trên nhu cầu và nguồn lực thực tế của đối tác, khách hàng.":
+    "We gather information based on the actual needs and resources of our partners and clients.",
+  "Chuyển giao dự án": "Project handover",
+  "Phân tích nhu cầu và nguồn lực, sau đó chuyển giao thông tin đến doanh nghiệp phụ trách trực tiếp.":
+    "We assess needs and resources, then hand the information over to the business responsible for delivery.",
+  "Đánh giá kết quả": "Evaluating results",
+  "Theo dõi, đánh giá hiệu quả sau quá trình thực thi và kết nối thêm nguồn lực cần thiết.":
+    "We monitor and assess outcomes after delivery and connect any additional resources needed.",
   "DẤU ẤN": "OUR FOOTPRINT",
   "đang vươn rộng.": "on the rise.",
   "đang được mở rộng.": "in the making.",
@@ -54,6 +112,31 @@ const englishTranslations: Record<string, string> = {
   "ĐỊNH HƯỚNG": "OUTLOOK",
   "Dài hạn": "Long-term",
   "Triết lý phát triển": "Our approach",
+  "Mô hình liên kết": "Connected ecosystem",
+  "Matrix Network": "Matrix Network",
+  "Matrix Community": "Matrix Community",
+  "Matrix Capital": "Matrix Capital",
+  "Định hướng · Điều phối": "Direction · Coordination",
+  "Kết nối nguồn lực": "Connecting resources",
+  "Chọn một thương hiệu để tìm hiểu vai trò": "Select a brand to explore its role",
+  "Một hệ sinh thái, kết nối đa chiều.": "One ecosystem, connected in every direction.",
+  "Matrix Holding giữ vai trò trung tâm, định hướng và điều phối. Các thương hiệu thành viên đồng thời kết nối với nhau, chia sẻ nguồn lực và mở rộng cơ hội hợp tác.":
+    "Matrix Holding provides central direction and coordination. Its member brands connect with one another, share resources, and create more opportunities to collaborate.",
+  "Đường nối tâm: liên kết với Holding": "Radial lines: connection to the Holding",
+  "Vòng tròn: liên kết giữa các thành viên": "Orbit: connections between members",
+  "GIẢI PHÁP DOANH NGHIỆP": "BUSINESS SERVICES",
+  "CỘNG ĐỒNG KẾT NỐI": "CONNECTED COMMUNITIES",
+  "KẾT NỐI ĐẦU TƯ": "INVESTMENT NETWORK",
+  "Đơn vị cung cấp dịch vụ": "Business service providers",
+  "Cộng đồng kết nối": "Connected communities",
+  "Kết nối đầu tư": "Investment connections",
+  "Thành viên của Matrix Holding": "A member of Matrix Holding",
+  "Đảm nhiệm vai trò xây dựng, quản lý và điều phối các cộng đồng kết nối kinh doanh cho doanh nghiệp.":
+    "Builds, manages, and coordinates business networking communities for companies.",
+  "Đảm nhiệm vai trò xây dựng, quản lý và điều phối các cộng đồng kết nối đầu tư cho doanh nghiệp.":
+    "Builds, manages, and coordinates investment networking communities for companies.",
+  "Đảm nhiệm vai trò xây dựng, quản lý và điều phối các đơn vị cung cấp dịch vụ cho doanh nghiệp.":
+    "Builds, manages, and coordinates service providers for companies.",
   "Liên kết": "Connected",
   "Cộng hưởng.": "Together.",
   "Cấu trúc hệ sinh thái": "Ecosystem structure",
@@ -207,6 +290,8 @@ const englishTranslations: Record<string, string> = {
   "Việt Hải Logistics (hư cấu)": "Viet Hai Logistics (fictional)",
   "Đối tác chiến lược": "Strategic partner",
   "Tin tức & hoạt động": "News & insights",
+  "Tất cả tin": "All news",
+  "Lọc tin tức theo thương hiệu": "Filter news by brand",
   "Câu chuyện": "Stories",
   "Matrix Holding.": "Matrix Holding.",
   "Cập nhật những thông tin, hoạt động và dấu mốc mới nhất.":

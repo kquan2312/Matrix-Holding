@@ -4,31 +4,33 @@ import { useLanguage } from "../../i18n/LanguageContext";
 const links = [
   {
     label: "Giới thiệu",
-    href: "#about",
+    href: "/#about",
   },
   {
     label: "Lĩnh vực",
-    href: "#business",
+    href: "/#business",
   },
+  /*
   {
     label: "Dự án",
-    href: "#projects",
+    href: "/#projects",
   },
+  */
   {
-    label: "Năng lực",
-    href: "#capabilities",
+    label: "Hệ sinh thái",
+    href: "/he-sinh-thai",
   },
   {
     label: "Tin tức",
-    href: "#news",
+    href: "/tin-tuc",
   },
   {
     label: "Tuyển dụng",
-    href: "#careers",
+    href: "/tuyen-dung",
   },
   {
     label: "Liên hệ",
-    href: "#contact",
+    href: "/lien-he",
   },
 ];
 
@@ -41,7 +43,7 @@ export default function Footer() {
         <div className="footer-main">
           <div className="footer-brand">
             <a
-              href="#"
+              href="/"
               className="brand"
               aria-label="Matrix Holding - Trang chủ"
             >
@@ -103,7 +105,7 @@ export default function Footer() {
               <span>{t("KĐT Bắc Linh Đàm, Phường Hoàng Liệt, Hà Nội")}</span>
             </div>
 
-            <a className="footer-contact-link" href="#contact">
+            <a className="footer-contact-link" href="/lien-he">
               {t("Trao đổi cơ hội hợp tác")}
               <ArrowUpRight size={14} />
             </a>

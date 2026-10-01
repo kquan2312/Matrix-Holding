@@ -60,7 +60,7 @@ export default function Careers() {
     <section id="careers" className="section careers section-border">
       <Container>
         <div className="section-label">
-          <span>12</span>
+          <span>01</span>
           <span>{t("Cơ hội nghề nghiệp")}</span>
         </div>
 
@@ -145,7 +145,7 @@ export default function Careers() {
           })}
         </div>
 
-        <a className="careers-contact-link" href="#contact">
+        <a className="careers-contact-link" href="/lien-he">
           {t("Quan tâm đến cơ hội nghề nghiệp?")}
           <span>{t("Kết nối với Matrix Holding")}</span>
           <ArrowUpRight size={18} aria-hidden="true" />

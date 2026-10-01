@@ -1,8 +1,18 @@
 # Matrix Holding — Corporate Landing Page
 
-Website giới thiệu **Matrix Holding — Tập đoàn kinh doanh đa ngành**.
+Website giới thiệu **Matrix Holding — Tập đoàn kinh doanh đa ngành**, gồm trang chủ và các trang Tin tức, Tuyển dụng, Liên hệ.
 
-Landing page được xây dựng theo hướng **corporate / premium / modern**, tập trung vào hình ảnh tập đoàn, hệ sinh thái kinh doanh, năng lực, dự án và định hướng phát triển.
+Giao diện được xây dựng theo hướng **corporate / premium / modern**, tập trung vào hình ảnh tập đoàn, hệ sinh thái kinh doanh, dự án và định hướng phát triển.
+
+### Các trang
+
+* Trang chủ: `/`
+* Hệ sinh thái: `/he-sinh-thai`
+* Tin tức: `/tin-tuc`
+* Tuyển dụng: `/tuyen-dung`
+* Liên hệ: `/lien-he`
+
+Khi triển khai trên hosting tĩnh, cấu hình rewrite các đường dẫn trên về `index.html` để có thể truy cập trực tiếp và tải lại từng trang.
 
 ---
 

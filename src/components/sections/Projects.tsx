@@ -13,7 +13,7 @@ export default function Projects() {
     >
       <Container>
         <div className="section-label">
-          <span>05</span>
+          <span>04</span>
           <span>{t("Dự án & hoạt động")}</span>
         </div>
 

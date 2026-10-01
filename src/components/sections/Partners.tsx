@@ -1,3 +1,4 @@
+
 import Container from "../common/Container";
 import { partners } from "../../data/partners";
 import { useLanguage } from "../../i18n/LanguageContext";
@@ -12,7 +13,7 @@ export default function Partners() {
     >
       <Container>
         <div className="section-label">
-          <span>09</span>
+          <span>04</span>
           <span>{t("Đối tác")}</span>
         </div>
 
@@ -24,24 +25,37 @@ export default function Partners() {
           </h2>
 
           <p>
-            {t("Matrix Holding trân trọng những mối quan hệ hợp tác cùng chia sẻ tầm nhìn và hướng tới các giá trị phát triển dài hạn.")}
+            {t(
+              "Matrix Holding trân trọng những mối quan hệ hợp tác cùng chia sẻ tầm nhìn và hướng tới các giá trị phát triển dài hạn."
+            )}
           </p>
         </div>
 
         {partners.length > 0 ? (
-          <div className="partners-grid">
-            {partners.map((partner) => (
-              <div className="partner" key={partner.id}>
-                <img src={partner.logo} alt={t(partner.name)} />
-              </div>
-            ))}
+          <div className="partners-marquee">
+            <div className="partners-track">
+              {[...partners, ...partners].map((partner, index) => (
+                <div
+                  className="partner"
+                  key={`${partner.id}-${index}`}
+                >
+                  <img
+                    src={partner.logo}
+                    alt={t(partner.name)}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         ) : (
           <div className="partners-placeholder">
-            {t("Thông tin đối tác sẽ được cập nhật trong thời gian tới.")}
+            {t(
+              "Thông tin đối tác sẽ được cập nhật trong thời gian tới."
+            )}
           </div>
         )}
       </Container>
     </section>
   );
 }
+

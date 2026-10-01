@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check, Copy, ExternalLink, X } from "lucide-react";
+import { ArrowUpRight, Check, Copy, ExternalLink, Phone, X, Mail } from "lucide-react";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import Container from "../common/Container";
 import { useLanguage } from "../../i18n/LanguageContext";
@@ -7,7 +7,7 @@ export default function CTA() {
   const { t } = useLanguage();
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [formDataState, setFormDataState] = useState({ name: "", email: "", message: "" });
+  const [formDataState, setFormDataState] = useState({ name: "", email: "", phone: "", message: "" });
   const dialogRef = useRef<HTMLDialogElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
 
@@ -45,7 +45,7 @@ export default function CTA() {
   const handleOpenGmail = () => {
     const subject = encodeURIComponent(`Matrix Holding - ${formDataState.name || "Liên hệ hợp tác"}`);
     const body = encodeURIComponent(
-      `${t("Họ và tên")}: ${formDataState.name}\n${t("Email")}: ${formDataState.email}\n\n${formDataState.message}`,
+      `${t("Họ và tên")}: ${formDataState.name}\n${t("Email")}: ${formDataState.email}\n${t("Số điện thoại")}: ${formDataState.phone}\n\n${formDataState.message}`,
     );
     window.open(
       `https://mail.google.com/mail/?view=cm&fs=1&to=matrixholding.support@gmail.com&su=${subject}&body=${body}`,
@@ -105,6 +105,13 @@ export default function CTA() {
               {copied ? <Check size={16} /> : <Copy size={16} />}
               <span>{copied ? t("Đã sao chép email!") : "matrixholding.support@gmail.com"}</span>
             </button>
+            <a
+    href="tel:+849xxxxxxxx"
+    className="cta-copy-email"
+  >
+    <Phone size={16} />
+    <span>+84 9xx xxx xxx</span>
+  </a>
           </div>
         </div>
       </Container>
@@ -159,6 +166,17 @@ export default function CTA() {
                 required
                 value={formDataState.email}
                 onChange={(e) => setFormDataState({ ...formDataState, email: e.target.value })}
+              />
+            </label>
+            <label>
+              <span>{t("Số điện thoại")}</span>
+              <input
+                name="phone"
+                type="tel"
+                autoComplete="tel"
+                required
+                value={formDataState.phone}
+                onChange={(e) => setFormDataState({ ...formDataState, phone: e.target.value })}
               />
             </label>
           </div>

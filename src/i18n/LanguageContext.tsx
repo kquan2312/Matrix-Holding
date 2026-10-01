@@ -17,9 +17,12 @@ interface LanguageContextValue {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("vi");
+  const [language, setLanguage] = useState<Language>(() =>
+    window.sessionStorage.getItem("matrix-language") === "en" ? "en" : "vi",
+  );
 
   useEffect(() => {
+    window.sessionStorage.setItem("matrix-language", language);
     document.documentElement.lang = language;
     document.title =
       language === "vi"

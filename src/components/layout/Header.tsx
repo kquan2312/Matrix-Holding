@@ -6,27 +6,32 @@ import type { Language } from "../../i18n/translations";
 const navItems = [
   {
     label: "Giới thiệu",
-    href: "#about",
+    href: "/#about",
+    sectionId: "about",
   },
   {
     label: "Lĩnh vực",
-    href: "#business",
+    href: "/#business",
+    sectionId: "business",
   },
+  /*
   {
     label: "Dự án",
-    href: "#projects",
+    href: "/#projects",
+    sectionId: "projects",
   },
+  */
   {
-    label: "Năng lực",
-    href: "#capabilities",
+    label: "Hệ sinh thái",
+    href: "/he-sinh-thai",
   },
   {
     label: "Tin tức",
-    href: "#news",
+    href: "/tin-tuc",
   },
   {
     label: "Tuyển dụng",
-    href: "#careers",
+    href: "/tuyen-dung",
   },
 ];
 
@@ -40,14 +45,22 @@ export default function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 30);
 
-      const sectionIds = navItems.map((item) => item.href.replace("#", ""));
+      const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+      if (pathname !== "/") {
+        setActiveSection(pathname);
+        return;
+      }
+
+      const sectionIds = navItems.flatMap((item) =>
+        item.sectionId ? [item.sectionId] : [],
+      );
       const scrollPosition = window.scrollY + 140;
 
       for (let i = sectionIds.length - 1; i >= 0; i--) {
         const id = sectionIds[i];
         const el = document.getElementById(id);
         if (el && el.offsetTop <= scrollPosition) {
-          setActiveSection(`#${id}`);
+          setActiveSection(`/#${id}`);
           return;
         }
       }
@@ -86,7 +99,7 @@ export default function Header() {
       >
         <div className="container header-inner">
           <a
-            href="#"
+            href="/"
             className="brand"
             onClick={closeMenu}
             aria-label="Matrix Holding - Trang chủ"
@@ -112,8 +125,8 @@ export default function Header() {
 
           <div className="header-actions">
             <a
-              href="#contact"
-              className={`header-contact ${activeSection === "#contact" ? "is-active" : ""}`}
+              href="/lien-he"
+              className={`header-contact ${activeSection === "/lien-he" ? "is-active" : ""}`}
             >
               <span>{t("Liên hệ")}</span>
               <ArrowUpRight size={16} />
@@ -143,7 +156,7 @@ export default function Header() {
       >
         <div className="mobile-menu-header">
           <a
-            href="#"
+            href="/"
             className="brand"
             onClick={closeMenu}
             aria-label="Matrix Holding - Trang chủ"
@@ -186,7 +199,8 @@ export default function Header() {
           ))}
 
           <a
-            href="#contact"
+            href="/lien-he"
+            className={activeSection === "/lien-he" ? "is-active" : ""}
             onClick={closeMenu}
           >
             <span>{String(navItems.length + 1).padStart(2, "0")}</span>

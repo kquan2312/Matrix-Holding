@@ -18,7 +18,7 @@ export default function BusinessUnits() {
     >
       <Container>
         <div className="section-label">
-          <span>04</span>
+          <span>03</span>
           <span>{t("Lĩnh vực kinh doanh")}</span>
         </div>
 

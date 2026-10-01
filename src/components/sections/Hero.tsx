@@ -31,14 +31,14 @@ export default function Hero() {
             />
             <div className="hero-banner-overlay" />
 
-            <h1 className="hero-banner-title">
+            {/* <h1 className="hero-banner-title">
               <span className="hero-title-line">
                 {t("Kiến tạo")}
               </span>
               <span className="hero-title-line hero-title-line-offset">
                 {t("giá trị")} <em>{t("bền vững.")}</em>
               </span>
-            </h1>
+            </h1> */}
 
             <div className="hero-banner-badge hero-banner-badge-left">
               <span className="badge-pulse-dot" />
@@ -72,9 +72,13 @@ export default function Hero() {
             <p>
               {t("Matrix Holding phát triển hệ sinh thái kinh doanh đa ngành, kết nối con người, nguồn lực và công nghệ để tạo ra những giá trị dài hạn.")}
             </p>
+            <p>
+              {t("Khởi nghiệp không chỉ cần một ý tưởng tốt, mà còn cần một người dẫn đường có tâm, một môi trường đủ điều kiện để phát triển và những cơ hội đủ lớn để trưởng thành.")}
+            </p>
+            
 
             <div className="hero-cta-group">
-              <a href="#contact" className="hero-cta-primary">
+              <a href="/lien-he" className="hero-cta-primary">
                 <span>{t("Liên hệ hợp tác")}</span>
                 <ArrowUpRight size={17} />
               </a>
