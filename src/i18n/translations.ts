@@ -2,6 +2,7 @@ export type Language = "vi" | "en";
 
 const englishTranslations: Record<string, string> = {
   "Giới thiệu": "About",
+  "Trang chủ": "Home",
   "Dự án": "Projects",
   "Năng lực": "Capabilities",
   "Tin tức": "News",
@@ -114,8 +115,9 @@ const englishTranslations: Record<string, string> = {
   "Triết lý phát triển": "Our approach",
   "Mô hình liên kết": "Connected ecosystem",
   "Matrix Network": "Matrix Network",
-  "Matrix Community": "Matrix Community",
-  "Matrix Capital": "Matrix Capital",
+  "Matrix Connect": "Matrix Connect",
+  "Matrix Ventures": "Matrix Ventures",
+  "Matrix Academy": "Matrix Academy",
   "Định hướng · Điều phối": "Direction · Coordination",
   "Kết nối nguồn lực": "Connecting resources",
   "Chọn một thương hiệu để tìm hiểu vai trò": "Select a brand to explore its role",
@@ -309,8 +311,130 @@ const englishTranslations: Record<string, string> = {
   "Việt Hải Logistics (hư cấu)": "Viet Hai Logistics (fictional)",
   "Đối tác chiến lược": "Strategic partner",
   "Tin tức & hoạt động": "News & insights",
+  "Xem tất cả": "View all",
+  "Đối tác cùng phát triển.": "Partners growing together.",
+  "Xem tất cả đối tác": "View all partners",
+  "Danh sách tên đối tác mẫu đang có trong dữ liệu; cần xác nhận quan hệ hợp tác và quyền công bố trước khi phát hành.":
+    "These sample partner names are present in the data; partnership status and publication permission must be confirmed before release.",
+  "Khám phá Matrix Holding": "Discover Matrix Holding",
+  "Tìm hiểu thêm": "Learn more",
+  "Xem hồ sơ năng lực": "Explore our capabilities",
+  "Một hệ sinh thái kết nối nguồn lực và cơ hội phát triển.":
+    "An ecosystem connecting resources and opportunities for growth.",
+  "Matrix Holding kết nối các hệ sinh thái chuyên biệt, doanh nghiệp và nguồn lực nhằm mở rộng cơ hội hợp tác, phát triển dài hạn.":
+    "Matrix Holding connects specialized ecosystems, businesses, and resources to expand opportunities for collaboration and long-term growth.",
+  "Xem cơ hội hợp tác": "Explore partnership opportunities",
+  "Hệ sinh thái Matrix Holding": "The Matrix Holding ecosystem",
+  "HỆ SINH THÁI DỊCH VỤ TOÀN DIỆN": "COMPREHENSIVE BUSINESS SERVICES",
+  "HỆ SINH THÁI KẾT NỐI KINH DOANH": "BUSINESS NETWORKING ECOSYSTEM",
+  "HỆ SINH THÁI KẾT NỐI ĐẦU TƯ": "INVESTMENT NETWORKING ECOSYSTEM",
+  "HỆ SINH THÁI ĐÀO TẠO TINH HOA": "EXECUTIVE LEARNING ECOSYSTEM",
+  "Giải pháp dịch vụ cho doanh nghiệp": "Business service solutions",
+  "Kết nối kinh doanh": "Business networking",
+  "Đào tạo và phát triển năng lực": "Learning and capability development",
+  "Kết nối doanh nghiệp với các dịch vụ và nguồn lực hỗ trợ cần thiết trong quá trình vận hành và phát triển.":
+    "Connecting businesses with services and resources that can support their operations and development.",
+  "Tạo không gian kết nối để doanh nghiệp gặp gỡ đối tác, chia sẻ kinh nghiệm và tìm kiếm cơ hội hợp tác.":
+    "Creating opportunities for businesses to meet partners, share experience, and explore collaboration.",
+  "Kết nối doanh nghiệp và nhà đầu tư, hỗ trợ trao đổi về cơ hội phát triển và nguồn lực đầu tư.":
+    "Connecting businesses and investors to discuss growth opportunities and investment resources.",
+  "Định hướng phát triển năng lực thông qua học tập, chia sẻ kiến thức và chương trình đào tạo dành cho doanh nghiệp.":
+    "Developing capabilities through learning, knowledge sharing, and training for businesses.",
+  "Kết nối nhu cầu doanh nghiệp với các dịch vụ chuyên môn phù hợp.": "Connecting business needs with relevant professional services.",
+  "Hỗ trợ doanh nghiệp tiếp cận nguồn lực phục vụ hoạt động vận hành.": "Helping businesses access resources for their operations.",
+  "Phối hợp cùng các đơn vị trong hệ sinh thái để mở rộng giải pháp.": "Working with ecosystem members to broaden available solutions.",
+  "Tạo cơ hội gặp gỡ và trao đổi giữa doanh nghiệp.": "Creating opportunities for businesses to meet and exchange ideas.",
+  "Khuyến khích chia sẻ kinh nghiệm và góc nhìn thị trường.": "Encouraging the sharing of experience and market perspectives.",
+  "Mở rộng kết nối hướng tới những cơ hội hợp tác phù hợp.": "Expanding connections in pursuit of suitable collaboration opportunities.",
+  "Tạo cầu nối trao đổi giữa doanh nghiệp và nhà đầu tư.": "Creating a channel for businesses and investors to connect.",
+  "Chia sẻ thông tin về cơ hội và nhu cầu phát triển.": "Sharing information about opportunities and development needs.",
+  "Kết nối nguồn lực đầu tư phù hợp với định hướng kinh doanh.": "Connecting investment resources with business direction.",
+  "Khuyến khích học tập và chia sẻ tri thức trong cộng đồng doanh nghiệp.": "Encouraging learning and knowledge sharing among businesses.",
+  "Phát triển năng lực phù hợp với nhu cầu của từng tổ chức.": "Developing capabilities to meet each organization's needs.",
+  "Kết nối chuyên gia, người học và doanh nghiệp trong hoạt động đào tạo.": "Connecting experts, learners, and businesses through training.",
+  "Bốn hệ sinh thái, cùng kết nối.": "Four ecosystems, connected.",
+  "Khám phá các hệ sinh thái chuyên biệt được định hướng để đồng hành cùng doanh nghiệp.":
+    "Explore specialized ecosystems designed to support businesses.",
+  "Khám phá ngay": "Explore",
+  "Tìm hiểu mô hình hệ sinh thái": "Explore the ecosystem model",
+  "Mô hình hoạt động hệ sinh thái": "Ecosystem operating model",
+  "Matrix Holding kết nối bốn hệ sinh thái chuyên biệt, cùng hướng tới hỗ trợ doanh nghiệp trên hành trình phát triển.":
+    "Matrix Holding connects four specialized ecosystems with a shared focus on supporting businesses as they grow.",
+  "Matrix Holding giữ vai trò trung tâm, định hướng và điều phối; bốn hệ sinh thái thành viên kết nối, chia sẻ nguồn lực và mở rộng cơ hội hợp tác.":
+    "Matrix Holding provides central direction and coordination, while four member ecosystems connect, share resources, and expand opportunities for collaboration.",
+  "Không tìm thấy hệ sinh thái": "Ecosystem not found",
+  "Quay lại hệ sinh thái": "Back to the ecosystem",
+  "Định hướng hoạt động": "Areas of focus",
+  "Kết nối đúng nguồn lực, tạo cơ hội phát triển.": "Connecting resources to create opportunities for growth.",
+  "Thông tin giới thiệu mang tính khái quát; phạm vi hoạt động và dịch vụ cụ thể sẽ được cập nhật theo thông tin chính thức.":
+    "This overview is general; specific activities and services will be updated when official information is available.",
+  "Câu chuyện và định hướng Matrix Holding.": "The story and direction of Matrix Holding.",
+  "Tìm hiểu về sứ mệnh, tầm nhìn, con người và cách Matrix Holding phát triển hệ sinh thái.":
+    "Learn about Matrix Holding's mission, vision, people, and ecosystem development.",
+  "Cam kết và định hướng": "Commitments and direction",
+  "Điều khoản cam kết": "Commitment terms",
+  "Lợi thế cạnh tranh": "Competitive advantages",
+  "Tuyên ngôn của Chủ tịch": "Chairperson's statement",
+  "Thông tin cam kết và điều khoản chính thức sẽ được cập nhật sau khi được doanh nghiệp xác nhận.":
+    "Official commitments and terms will be published after they have been confirmed by the company.",
+  "Nội dung về lợi thế cạnh tranh cần được hoàn thiện dựa trên thông tin và số liệu đã được phê duyệt.":
+    "Information about competitive advantages will be completed using approved facts and figures.",
+  "Thông điệp chính thức của Chủ tịch sẽ được bổ sung sau khi có nội dung được duyệt để công bố.":
+    "The Chairperson's official statement will be added once approved for publication.",
+  "Thông tin đang được hoàn thiện": "Information being prepared",
+  "Ban lãnh đạo Matrix Holding": "Matrix Holding leadership",
+  "Thông tin đội ngũ lãnh đạo sẽ được cập nhật sau khi có hồ sơ chính thức được duyệt.":
+    "Leadership profiles will be added once approved for publication.",
+  "Các hồ sơ bên trên là hình minh họa, không đại diện cho lãnh đạo thực tế. Thông tin chính thức sẽ được cập nhật sau khi được duyệt công bố.":
+    "The profiles above are illustrative and do not represent actual leaders. Official information will be added once approved for publication.",
+  "Các cột mốc đang ở dạng tham khảo và cần được doanh nghiệp xác nhận trước khi công bố.":
+    "These milestones are illustrative and need company confirmation before publication.",
+  "Thông tin đối tác chiến lược sẽ được cập nhật sau khi xác nhận nội dung và nhận diện được phép công bố.":
+    "Strategic partner information will be updated once the content and approved brand assets are confirmed.",
+  "Tìm hiểu các vị trí tham khảo và cập nhật thông tin tuyển dụng chính thức.":
+    "Explore sample roles and check for official recruitment updates.",
+  "Vị trí tham khảo": "Sample role",
+  "Các vị trí trên là nội dung tham khảo, chưa phải thông tin tuyển dụng chính thức.":
+    "These roles are examples, not official job openings.",
+  "Bản đồ Google Maps": "Google Maps",
+  "Tên doanh nghiệp": "Company name",
+  "Mã số thuế": "Tax ID",
   "Tất cả tin": "All news",
   "Lọc tin tức theo thương hiệu": "Filter news by brand",
+  "Tin tức nổi bật": "Featured news",
+  "Tin tức mới nhất": "Latest news",
+  "Tin tức khác": "More news",
+  "Quay lại tin tức": "Back to news",
+  "Không tìm thấy tin tức": "News article not found",
+  "Bài viết có thể đã được gỡ bỏ hoặc đường dẫn không chính xác.":
+    "This article may have been removed or the URL may be incorrect.",
+  "Khám phá thêm tin tức": "Explore more news",
+  "Matrix Holding định hướng xây dựng hệ sinh thái kinh doanh đa ngành":
+    "Matrix Holding outlines its vision for a diversified business ecosystem",
+  "Matrix Holding theo đuổi mô hình phát triển đa ngành, tập trung kết nối nguồn lực, năng lực chuyên môn và cơ hội hợp tác để tạo ra giá trị dài hạn.":
+    "Matrix Holding is pursuing a diversified growth model focused on connecting resources, professional capabilities, and partnership opportunities to create long-term value.",
+  "Kết nối nguồn lực mở ra những cơ hội hợp tác mới":
+    "Connecting resources opens up new partnership opportunities",
+  "Trong môi trường kinh doanh liên tục thay đổi, khả năng kết nối doanh nghiệp, đối tác và chuyên gia là một trong những nền tảng quan trọng để phát triển bền vững.":
+    "In a changing business environment, connecting businesses, partners, and specialists is an important foundation for sustainable growth.",
+  "Đổi mới tư duy để thích ứng với thị trường đang thay đổi":
+    "Rethinking how to adapt to a changing market",
+  "Công nghệ, dữ liệu và những mô hình kinh doanh mới đang tạo ra nhiều thay đổi trong cách doanh nghiệp vận hành và tìm kiếm cơ hội tăng trưởng.":
+    "Technology, data, and new business models are changing how companies operate and pursue growth opportunities.",
+  "Hướng tới những giá trị phát triển bền vững":
+    "Working toward sustainable growth",
+  "Phát triển dài hạn không chỉ nằm ở tốc độ tăng trưởng mà còn ở khả năng xây dựng nền tảng vận hành hiệu quả, trách nhiệm và tạo giá trị cho các bên liên quan.":
+    "Long-term development is about more than growth; it also depends on building effective, responsible operations that create value for stakeholders.",
+  "Phát triển bền vững": "Sustainable development",
+  "Con người là nền tảng của một hệ sinh thái phát triển":
+    "People are the foundation of a growing ecosystem",
+  "Một hệ sinh thái hiệu quả được xây dựng từ những đội ngũ có năng lực, tinh thần hợp tác và cùng hướng tới những mục tiêu có giá trị lâu dài.":
+    "An effective ecosystem is built by capable teams that collaborate and work toward goals with lasting value.",
+  "Con người": "People",
+  "Từ kết nối nguồn lực đến kiến tạo giá trị dài hạn":
+    "From connecting resources to creating long-term value",
+  "Với tư duy dài hạn, Matrix Holding hướng tới việc phát triển các lĩnh vực có tiềm năng, đồng thời xây dựng mạng lưới hợp tác tạo nền tảng cho những cơ hội mới.":
+    "With a long-term mindset, Matrix Holding aims to develop promising sectors while building a network of partners that can support new opportunities.",
   "Câu chuyện": "Stories",
   "Matrix Holding.": "Matrix Holding.",
   "Cập nhật những thông tin, hoạt động và dấu mốc mới nhất.":

@@ -47,7 +47,7 @@ export interface PartnerFeedback {
   relationship: string;
 }
 
-export type NewsBrand = "network" | "community" | "capital";
+export type NewsBrand = "network" | "connect" | "ventures" | "academy";
 
 export interface NewsItem {
   id: string;
@@ -56,8 +56,14 @@ export interface NewsItem {
   description: string;
   image: string;
   date: string;
+  publishedAt: string;
   category?: string;
   brand: NewsBrand;
+  featured?: boolean;
+  content: {
+    vi: string[];
+    en: string[];
+  };
 }
 export interface GroupStat {
   id: string;

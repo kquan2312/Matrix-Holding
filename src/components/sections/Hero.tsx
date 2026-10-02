@@ -19,7 +19,6 @@ export default function Hero() {
           <span>EST. 2023</span>
         </div>
 
-        {/* Corporate Architectural Hero Banner */}
         <div className="hero-banner-wrapper">
           <div className="hero-banner-frame">
             <img
@@ -30,15 +29,6 @@ export default function Hero() {
               loading="eager"
             />
             <div className="hero-banner-overlay" />
-
-            {/* <h1 className="hero-banner-title">
-              <span className="hero-title-line">
-                {t("Kiến tạo")}
-              </span>
-              <span className="hero-title-line hero-title-line-offset">
-                {t("giá trị")} <em>{t("bền vững.")}</em>
-              </span>
-            </h1> */}
 
             <div className="hero-banner-badge hero-banner-badge-left">
               <span className="badge-pulse-dot" />
@@ -78,12 +68,12 @@ export default function Hero() {
             
 
             <div className="hero-cta-group">
-              <a href="/lien-he" className="hero-cta-primary">
-                <span>{t("Liên hệ hợp tác")}</span>
+              <a href="/gioi-thieu" className="hero-cta-primary">
+                <span>{t("Khám phá Matrix Holding")}</span>
                 <ArrowUpRight size={17} />
               </a>
 
-              <a href="#business" className="hero-cta-secondary">
+              <a href="/he-sinh-thai" className="hero-cta-secondary">
                 <span>{t("Khám phá hệ sinh thái")}</span>
                 <ArrowDownRight size={17} />
               </a>

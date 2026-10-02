@@ -4,18 +4,8 @@ import { useLanguage } from "../../i18n/LanguageContext";
 const links = [
   {
     label: "Giới thiệu",
-    href: "/#about",
+    href: "/gioi-thieu",
   },
-  {
-    label: "Lĩnh vực",
-    href: "/#business",
-  },
-  /*
-  {
-    label: "Dự án",
-    href: "/#projects",
-  },
-  */
   {
     label: "Hệ sinh thái",
     href: "/he-sinh-thai",
@@ -79,10 +69,11 @@ export default function Footer() {
               {t("HỆ SINH THÁI")}
             </span>
 
-            <span>Matrix Holding</span>
-            <span>Matrix Network</span>
-            <span>Matrix Connect</span>
-            <span>Matrix Ventures</span>
+            <a href="/he-sinh-thai">Matrix Holding</a>
+            <a href="/he-sinh-thai/matrix-network">Matrix Network</a>
+            <a href="/he-sinh-thai/matrix-connect">Matrix Connect</a>
+            <a href="/he-sinh-thai/matrix-ventures">Matrix Ventures</a>
+            <a href="/he-sinh-thai/matrix-academy">Matrix Academy</a>
           </div>
 
           <div className="footer-contact">

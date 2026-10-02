@@ -12,7 +12,7 @@ export default function Capabilities() {
     >
       <Container>
         <div className="section-label">
-          <span>06</span>
+          <span>05</span>
           <span>{t("Năng lực")}</span>
         </div>
 

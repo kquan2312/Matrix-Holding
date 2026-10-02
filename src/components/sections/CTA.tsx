@@ -3,11 +3,19 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import Container from "../common/Container";
 import { useLanguage } from "../../i18n/LanguageContext";
 
-export default function CTA() {
+export default function CTA({ detailed = false }: { detailed?: boolean }) {
   const { t } = useLanguage();
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [formDataState, setFormDataState] = useState({ name: "", email: "", phone: "", message: "" });
+  const [formDataState, setFormDataState] = useState({
+    name: "",
+    company: "",
+    address: "",
+    taxCode: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   const dialogRef = useRef<HTMLDialogElement>(null);
   const nameInputRef = useRef<HTMLInputElement>(null);
 
@@ -45,7 +53,7 @@ export default function CTA() {
   const handleOpenGmail = () => {
     const subject = encodeURIComponent(`Matrix Holding - ${formDataState.name || "Liên hệ hợp tác"}`);
     const body = encodeURIComponent(
-      `${t("Họ và tên")}: ${formDataState.name}\n${t("Email")}: ${formDataState.email}\n${t("Số điện thoại")}: ${formDataState.phone}\n\n${formDataState.message}`,
+      `${t("Họ và tên")}: ${formDataState.name}\n${t("Tên doanh nghiệp")}: ${formDataState.company}\n${t("Trụ sở chính")}: ${formDataState.address}\n${t("Mã số thuế")}: ${formDataState.taxCode}\n${t("Email")}: ${formDataState.email}\n${t("Số điện thoại")}: ${formDataState.phone}\n\n${formDataState.message}`,
     );
     window.open(
       `https://mail.google.com/mail/?view=cm&fs=1&to=matrixholding.support@gmail.com&su=${subject}&body=${body}`,
@@ -58,11 +66,15 @@ export default function CTA() {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const name = String(formData.get("name") ?? "").trim();
+    const company = String(formData.get("company") ?? "").trim();
+    const address = String(formData.get("address") ?? "").trim();
+    const taxCode = String(formData.get("taxCode") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
+    const phone = String(formData.get("phone") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
     const subject = encodeURIComponent(`Matrix Holding - ${name}`);
     const body = encodeURIComponent(
-      `${t("Họ và tên")}: ${name}\n${t("Email")}: ${email}\n\n${message}`,
+      `${t("Họ và tên")}: ${name}\n${t("Tên doanh nghiệp")}: ${company}\n${t("Trụ sở chính")}: ${address}\n${t("Mã số thuế")}: ${taxCode}\n${t("Email")}: ${email}\n${t("Số điện thoại")}: ${phone}\n\n${message}`,
     );
 
     closeForm();
@@ -97,6 +109,14 @@ export default function CTA() {
               <ArrowUpRight size={22} />
             </button>
 
+            <a
+              className="cta-partnership-link"
+              href={detailed ? "/he-sinh-thai" : "/lien-he"}
+            >
+              {t("Xem cơ hội hợp tác")}
+              <ArrowUpRight size={16} aria-hidden="true" />
+            </a>
+
             <button
               type="button"
               className="cta-copy-email"
@@ -106,15 +126,59 @@ export default function CTA() {
               <span>{copied ? t("Đã sao chép email!") : "matrixholding.support@gmail.com"}</span>
             </button>
             <a
-    href="tel:+849xxxxxxxx"
-    className="cta-copy-email"
-  >
-    <Phone size={16} />
-    <span>+84 9xx xxx xxx</span>
-  </a>
+              href="tel:+84964243026"
+              className="cta-copy-email"
+            >
+              <Phone size={16} />
+              <span>(+84) 964 243 026</span>
+            </a>
           </div>
         </div>
       </Container>
+
+      {detailed && (
+        <Container>
+          <div className="contact-details">
+            <section className="contact-business-info">
+              <h2>{t("Thông tin doanh nghiệp")}</h2>
+              <dl>
+                <div>
+                  <dt>{t("Tên doanh nghiệp")}</dt>
+                  <dd>Matrix Holding</dd>
+                </div>
+                <div>
+                  <dt>{t("Trụ sở chính")}</dt>
+                  <dd>{t("KĐT Bắc Linh Đàm, Phường Hoàng Liệt, Hà Nội")}</dd>
+                </div>
+                <div>
+                  <dt>{t("Email")}</dt>
+                  <dd>
+                    <a href="mailto:matrixholding.support@gmail.com">
+                      matrixholding.support@gmail.com
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt>{t("Số điện thoại")}</dt>
+                  <dd>
+                    <a href="tel:+84964243026">(+84) 964 243 026</a>
+                  </dd>
+                </div>
+              </dl>
+            </section>
+
+            <section className="contact-map-section">
+              <h2>{t("Bản đồ Google Maps")}</h2>
+              <iframe
+                title={t("Bản đồ Google Maps")}
+                src="https://maps.google.com/maps?q=K%C4%90T%20B%E1%BA%AFc%20Linh%20%C4%90%C3%A0m%2C%20Ph%C6%B0%E1%BB%9Dng%20Ho%C3%A0ng%20Li%E1%BB%87t%2C%20H%C3%A0%20N%E1%BB%99i&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </section>
+          </div>
+        </Container>
+      )}
 
       <dialog
         ref={dialogRef}
@@ -156,6 +220,40 @@ export default function CTA() {
                 onChange={(e) => setFormDataState({ ...formDataState, name: e.target.value })}
               />
             </label>
+            <label>
+              <span>{t("Tên doanh nghiệp")}</span>
+              <input
+                name="company"
+                type="text"
+                autoComplete="organization"
+                required={detailed}
+                value={formDataState.company}
+                onChange={(e) => setFormDataState({ ...formDataState, company: e.target.value })}
+              />
+            </label>
+            {detailed && (
+              <label>
+                <span>{t("Trụ sở chính")}</span>
+                <input
+                  name="address"
+                  type="text"
+                  autoComplete="street-address"
+                  value={formDataState.address}
+                  onChange={(e) => setFormDataState({ ...formDataState, address: e.target.value })}
+                />
+              </label>
+            )}
+            {detailed && (
+              <label>
+                <span>{t("Mã số thuế")}</span>
+                <input
+                  name="taxCode"
+                  type="text"
+                  value={formDataState.taxCode}
+                  onChange={(e) => setFormDataState({ ...formDataState, taxCode: e.target.value })}
+                />
+              </label>
+            )}
 
             <label>
               <span>{t("Email")}</span>

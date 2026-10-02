@@ -48,6 +48,7 @@ export default function History() {
             <span className="history-eyebrow">{t("LỊCH SỬ HÌNH THÀNH")}</span>
             <h2>{t("Hành trình của Matrix Holding")}</h2>
             <p>{t("Chọn từng cột mốc để xem những dấu ấn quan trọng trên hành trình phát triển.")}</p>
+            <p className="history-disclaimer">{t("Các cột mốc đang ở dạng tham khảo và cần được doanh nghiệp xác nhận trước khi công bố.")}</p>
           </div>
 
           <div className="history-timeline" role="group" aria-label={t("Các cột mốc lịch sử")}>

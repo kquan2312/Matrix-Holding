@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import Container from "../common/Container";
 import { useLanguage } from "../../i18n/LanguageContext";
 
@@ -36,10 +37,16 @@ export default function Introduction() {
               </p>
             </div>
 
-            <a href="#business" className="text-link">
-              {t("Khám phá hệ sinh thái")}
-              <span>↗</span>
-            </a>
+            <div className="introduction-actions">
+              <a href="/gioi-thieu" className="text-link">
+                {t("Tìm hiểu thêm")}
+                <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
+              <a href="/gioi-thieu#capabilities" className="text-link">
+                {t("Xem hồ sơ năng lực")}
+                <ArrowUpRight size={17} aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </div>
 

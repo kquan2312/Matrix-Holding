@@ -9,7 +9,7 @@ export default function Leadership() {
     <section className="section leadership section-border">
       <Container>
         <div className="section-label">
-          <span>08</span>
+          <span>04</span>
           <span>{t("Đội ngũ lãnh đạo")}</span>
         </div>
 
@@ -25,42 +25,23 @@ export default function Leadership() {
           </p>
         </div>
 
-        {leadership.length > 0 ? (
-          <div className="leadership-grid">
-            {leadership.map((leader) => (
-              <article
-                className="leader-card"
-                key={leader.id}
-              >
-                <div className="leader-image">
-                  <img
-                    src={leader.image}
-                    alt={t(leader.name)}
-                  />
-                </div>
-
-                <div className="leader-info">
-                  <h3>{t(leader.name)}</h3>
-                  <p>{t(leader.position)}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        ) : (
-          <div className="leadership-placeholder">
-            <span>08</span>
-
-            <div>
-              <h3>
-                Leadership Team
-              </h3>
-
-              <p>
-                {t("Thông tin đội ngũ lãnh đạo sẽ được cập nhật.")}
-              </p>
-            </div>
-          </div>
-        )}
+        <div className="leadership-grid">
+          {leadership.map((leader) => (
+            <article className="leader-card" key={leader.id}>
+              <div className="leader-image">
+                <img src={leader.image} alt={t(leader.name)} loading="lazy" />
+              </div>
+              <div className="leader-info">
+                <h3>{t(leader.name)}</h3>
+                <p>{t(leader.position)}</p>
+                {leader.description && <small>{t(leader.description)}</small>}
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="leadership-disclaimer">
+          {t("Các hồ sơ bên trên là hình minh họa, không đại diện cho lãnh đạo thực tế. Thông tin chính thức sẽ được cập nhật sau khi được duyệt công bố.")}
+        </p>
       </Container>
     </section>
   );

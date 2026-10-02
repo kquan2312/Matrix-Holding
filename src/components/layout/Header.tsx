@@ -5,22 +5,13 @@ import type { Language } from "../../i18n/translations";
 
 const navItems = [
   {
+    label: "Trang chủ",
+    href: "/",
+  },
+  {
     label: "Giới thiệu",
-    href: "/#about",
-    sectionId: "about",
+    href: "/gioi-thieu",
   },
-  {
-    label: "Lĩnh vực",
-    href: "/#business",
-    sectionId: "business",
-  },
-  /*
-  {
-    label: "Dự án",
-    href: "/#projects",
-    sectionId: "projects",
-  },
-  */
   {
     label: "Hệ sinh thái",
     href: "/he-sinh-thai",
@@ -47,26 +38,17 @@ export default function Header() {
 
       const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
       if (pathname !== "/") {
-        setActiveSection(pathname);
+        setActiveSection(
+          pathname.startsWith("/tin-tuc/")
+            ? "/tin-tuc"
+            : pathname.startsWith("/he-sinh-thai/")
+              ? "/he-sinh-thai"
+              : pathname,
+        );
         return;
       }
 
-      const sectionIds = navItems.flatMap((item) =>
-        item.sectionId ? [item.sectionId] : [],
-      );
-      const scrollPosition = window.scrollY + 140;
-
-      for (let i = sectionIds.length - 1; i >= 0; i--) {
-        const id = sectionIds[i];
-        const el = document.getElementById(id);
-        if (el && el.offsetTop <= scrollPosition) {
-          setActiveSection(`/#${id}`);
-          return;
-        }
-      }
-      if (window.scrollY < 200) {
-        setActiveSection("");
-      }
+      setActiveSection("");
     };
 
     handleScroll();

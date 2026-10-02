@@ -1,27 +1,23 @@
 import Hero from "../components/sections/Hero";
-import Introduction from "../components/sections/Introduction";
-import BusinessUnits from "../components/sections/BusinessUnits";
-import Projects from "../components/sections/Projects";
+import HomeAboutPreview from "../components/sections/HomeAboutPreview";
+import EcosystemOverview from "../components/sections/EcosystemOverview";
 import Partners from "../components/sections/Partners";
-import GroupScale from "../components/sections/GroupScale";
-import History from "../components/sections/History";
+import News from "../components/sections/News";
+import CareersOverview from "../components/sections/CareersOverview";
 import AboutFaq from "../components/sections/AboutFaq";
-import WorkProcess from "../components/sections/WorkProcess";
-import VisionMission from "../components/sections/VisionMission";
+import CTA from "../components/sections/CTA";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Introduction />
-      <VisionMission />
+      <HomeAboutPreview />
+      <EcosystemOverview />
+      <Partners preview />
+      <News preview />
+      <CareersOverview />
       <AboutFaq />
-      <GroupScale />
-      <History />
-      <WorkProcess />
-      <BusinessUnits />
-      {/* <Projects /> */}
-      <Partners />
+      <CTA />
     </>
   );
 }
