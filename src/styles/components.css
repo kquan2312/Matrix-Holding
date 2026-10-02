@@ -903,6 +903,22 @@
    INTRODUCTION
 ======================================== */
 
+.introduction-quote {
+  margin-bottom: 32px;
+  padding: 24px 28px;
+  border-left: 3px solid var(--blue-700);
+  border-radius: 16px;
+  background: rgba(36, 90, 118, 0.04);
+}
+
+.introduction-quote p {
+  margin: 0;
+  font-size: clamp(18px, 2vw, 28px);
+  line-height: 1.55;
+  letter-spacing: -0.03em;
+  color: var(--blue-900);
+}
+
 .introduction-layout {
   display: grid;
 
@@ -3397,6 +3413,162 @@
   line-height: 1.9;
 }
 
+.news-feedback {
+  max-width: 800px;
+  padding: 38px 28px 44px;
+  margin: 16px auto 0;
+  border-top: 1px solid var(--border);
+}
+
+.news-feedback > h2 {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.news-feedback-note,
+.news-comments-empty {
+  margin-top: 8px;
+  color: var(--gray-500);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.news-reactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.news-reaction {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--gray-700);
+  font-size: 12px;
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    background-color var(--transition);
+}
+
+.news-reaction span {
+  color: var(--gray-500);
+  font-variant-numeric: tabular-nums;
+}
+
+.news-reaction:hover,
+.news-reaction.is-selected {
+  border-color: var(--blue-700);
+  background: var(--blue-50);
+  color: var(--blue-900);
+}
+
+.news-comment-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.news-comment-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--gray-700);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.news-comment-form input,
+.news-comment-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 11px 13px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  outline: none;
+  background: var(--blue-50);
+  color: var(--black);
+  font: inherit;
+  font-size: 14px;
+}
+
+.news-comment-form input:focus,
+.news-comment-form textarea:focus {
+  border-color: var(--blue-700);
+  box-shadow: 0 0 0 3px rgba(39, 92, 117, 0.12);
+}
+
+.news-comment-form input {
+  min-height: 44px;
+}
+
+.news-comment-form textarea {
+  resize: vertical;
+}
+
+.news-comment-submit {
+  justify-self: start;
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: var(--radius-pill);
+  background: var(--blue-900);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.news-feedback-error {
+  margin-top: 12px;
+  color: #a33131;
+  font-size: 12px;
+}
+
+.news-comments {
+  margin-top: 34px;
+}
+
+.news-comments > h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.news-comment {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.news-comment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+
+.news-comment-meta strong {
+  color: var(--gray-900);
+  font-size: 13px;
+}
+
+.news-comment-meta time {
+  color: var(--gray-500);
+  font-size: 10px;
+}
+
+.news-comment > p {
+  margin-top: 9px;
+  color: var(--gray-700);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
 .news-article-more {
   display: inline-flex;
   align-items: center;
@@ -3496,6 +3668,14 @@
     gap: 18px;
     padding: 30px 22px 8px;
     font-size: 15px;
+  }
+
+  .news-feedback {
+    padding: 30px 22px 34px;
+  }
+
+  .news-feedback > h2 {
+    font-size: 22px;
   }
 
   .news-article-more {
@@ -4523,6 +4703,48 @@
 
 .footer-bottom span:nth-child(2) {
   text-align: right;
+}
+.introduction-hero {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 360px;
+  margin-bottom: 80px;
+}
+
+.introduction-chairman {
+  overflow: hidden;
+  border-radius: var(--radius-card);
+}
+
+.introduction-chairman img {
+  width: 100%;
+  height: 100%;
+  object-fit :fill;
+}
+
+.introduction-quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px 55px;
+  background: #f4f5f3;
+}
+
+.introduction-quote p {
+  max-width: 520px;
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.introduction-quote-author {
+  margin-top: 24px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.55;
 }
 /* ========================================
    RESPONSIVE
@@ -5657,6 +5879,18 @@
   .partners-preview .partners-name-list {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+   .introduction-hero {
+    height: 320px;
+    margin-bottom: 65px;
+  }
+
+  .introduction-quote {
+    padding: 35px 40px;
+  }
+
+  .introduction-quote p {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -5745,5 +5979,26 @@
 
   .contact-map-section iframe {
     min-height: 280px;
+  }
+  .introduction-hero {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .introduction-chairman {
+    height: 280px;
+  }
+
+  .introduction-quote {
+    min-height: 260px;
+    padding: 35px 25px;
+  }
+
+  .introduction-quote p {
+    font-size: 21px;
+  }
+
+  .introduction-quote-author {
+    margin-top: 20px;
   }
 }

@@ -23,9 +23,9 @@ export default function Careers() {
   const [applicationMessage, setApplicationMessage] = useState("");
   const dialogRef = useRef<HTMLDialogElement>(null);
   const availableSectors = businessUnits.filter((unit) =>
-    careerRoles.slice(0, 4).some((role) => role.businessUnitId === unit.id),
+    careerRoles.some((role) => role.businessUnitId === unit.id),
   );
-  const visibleRoles = careerRoles.slice(0, 4).filter(
+  const visibleRoles = careerRoles.filter(
     (role) => selectedSector === "all" || role.businessUnitId === selectedSector,
   );
   const selectedBusinessUnit = selectedRole

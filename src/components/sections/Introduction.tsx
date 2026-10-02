@@ -8,10 +8,34 @@ export default function Introduction() {
   return (
     <section id="about" className="section introduction">
       <Container>
+        <div className="introduction-hero">
+  <div className="introduction-chairman">
+    <img
+      src="/images/chairman.jpg"
+      alt="Chủ tịch Matrix Holding"
+    />
+  </div>
+
+  <div className="introduction-quote">
+    <p>
+      “
+      {t(
+        "Khởi nghiệp không chỉ cần một ý tưởng tốt, mà còn cần một người dẫn đường có tâm, một môi trường đủ điều kiện để phát triển và những cơ hội đủ lớn để trưởng thành."
+      )}
+      ”
+    </p>
+
+    <span className="introduction-quote-author">
+      {t("Chủ tịch Matrix Holding")}
+    </span>
+  </div>
+</div>
         <div className="section-label">
           <span>01</span>
           <span>{t("Về Matrix Holding")}</span>
         </div>
+
+        
 
         <div className="introduction-layout">
           <h2>

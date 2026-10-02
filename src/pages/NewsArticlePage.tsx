@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Container from "../components/common/Container";
+import NewsArticleFeedback from "../components/sections/NewsArticleFeedback";
 import { news } from "../data/news";
 import { useLanguage } from "../i18n/LanguageContext";
 import type { NewsBrand } from "../types";
@@ -70,6 +71,8 @@ export default function NewsArticlePage() {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+
+          <NewsArticleFeedback articleSlug={article.slug} />
 
           <a
             className="news-article-more"

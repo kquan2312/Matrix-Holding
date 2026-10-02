@@ -28,6 +28,8 @@ const englishTranslations: Record<string, string> = {
   "Chúng tôi làm gì?": "What do we do?",
   "Chúng tôi tập trung xây dựng một môi trường kinh doanh hiệu quả, nơi các doanh nghiệp có thể tiếp cận với nhiều nguồn lực và mở ra cơ hội tiếp cận thị trường bền vững.":
   "We focus on building an effective business environment where companies can access resources and open up opportunities for sustainable market access.",
+  "Khởi nghiệp không chỉ cần một ý tưởng tốt, mà còn cần một người dẫn đường có tâm, một môi trường đủ điều kiện để phát triển và những cơ hội đủ lớn để trưởng thành.":
+  "Starting a business does not require only a good idea; it also needs a guiding leader with heart, an environment with the right conditions to grow, and opportunities large enough to thrive.",
   "CÂU HỎI THƯỜNG GẶP": "FREQUENTLY ASKED QUESTIONS",
   "Giải đáp về Matrix Holding": "Answers about Matrix Holding",
   "Không gian và định hướng phát triển của Matrix Holding":
@@ -408,6 +410,19 @@ const englishTranslations: Record<string, string> = {
   "Không tìm thấy tin tức": "News article not found",
   "Bài viết có thể đã được gỡ bỏ hoặc đường dẫn không chính xác.":
     "This article may have been removed or the URL may be incorrect.",
+  "Bình luận và cảm xúc": "Comments and reactions",
+  "Phản hồi được lưu trên trình duyệt hiện tại, chưa được gửi lên máy chủ.":
+    "Feedback is saved in this browser and is not sent to a server.",
+  "Đánh giá bài viết": "Rate this article",
+  "Thích": "Like",
+  "Không thích": "Dislike",
+  "Tên hiển thị": "Display name",
+  "Bình luận": "Comment",
+  "Gửi bình luận": "Post comment",
+  "Không thể lưu phản hồi trên trình duyệt này.":
+    "Unable to save feedback in this browser.",
+  "Chưa có bình luận. Hãy là người đầu tiên chia sẻ ý kiến.":
+    "No comments yet. Be the first to share your thoughts.",
   "Khám phá thêm tin tức": "Explore more news",
   "Matrix Holding định hướng xây dựng hệ sinh thái kinh doanh đa ngành":
     "Matrix Holding outlines its vision for a diversified business ecosystem",
