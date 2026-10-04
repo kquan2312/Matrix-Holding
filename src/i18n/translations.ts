@@ -406,6 +406,30 @@ const englishTranslations: Record<string, string> = {
   "Tìm theo tiêu đề hoặc nội dung...": "Search by title or content...",
   "Lọc theo danh mục": "Filter by category",
   "Tất cả danh mục": "All categories",
+  "Quảng cáo": "Advertisement",
+  "Khám phá hệ sinh thái đa lĩnh vực": "Explore a diversified ecosystem",
+  "Kết nối dịch vụ, kinh doanh, đầu tư và đào tạo trong hệ sinh thái đa lĩnh vực.":
+    "Connecting services, business, investment, and learning across a diversified ecosystem.",
+  "Matrix Network — giải pháp dịch vụ cho doanh nghiệp":
+    "Matrix Network — business service solutions",
+  "Kết nối doanh nghiệp với các dịch vụ và nguồn lực hỗ trợ vận hành, phát triển.":
+    "Connecting businesses with services and resources that support operations and growth.",
+  "Tìm hiểu Matrix Network": "Discover Matrix Network",
+  "Matrix Connect — mở rộng kết nối kinh doanh":
+    "Matrix Connect — expanding business connections",
+  "Gặp gỡ đối tác, chia sẻ kinh nghiệm và khám phá cơ hội hợp tác phù hợp.":
+    "Meet partners, share experience, and explore relevant collaboration opportunities.",
+  "Tìm hiểu Matrix Connect": "Discover Matrix Connect",
+  "Matrix Ventures — kết nối cơ hội đầu tư":
+    "Matrix Ventures — connecting investment opportunities",
+  "Kết nối doanh nghiệp và nhà đầu tư để cùng trao đổi về cơ hội phát triển.":
+    "Connecting businesses and investors to discuss opportunities for growth.",
+  "Tìm hiểu Matrix Ventures": "Discover Matrix Ventures",
+  "Matrix Academy — phát triển năng lực đội ngũ":
+    "Matrix Academy — developing team capabilities",
+  "Khám phá hoạt động học tập, chia sẻ tri thức và phát triển năng lực doanh nghiệp.":
+    "Explore learning, knowledge-sharing, and business capability development.",
+  "Tìm hiểu Matrix Academy": "Discover Matrix Academy",
   "Kinh tế": "Economy",
   "Vận chuyển": "Transportation",
   "Đánh giá cơ hội đầu tư bất động sản bằng góc nhìn dài hạn":

@@ -6024,6 +6024,66 @@
 .news-card[data-brand="ventures"] { --accent: #d99927; --accent-soft: #fbf2e3; }
 .news-card[data-brand="academy"]  { --accent: #527e5a; --accent-soft: #eff7ef; }
 
+.news-ad-card {
+  --accent: var(--blue-700);
+  border-color: rgba(39, 92, 117, 0.22);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(94, 160, 181, 0.2), transparent 52%),
+    linear-gradient(145deg, #f7fbfc, #eaf3f5);
+}
+.news-ad-link {
+  position: relative;
+  justify-content: center;
+  gap: 16px;
+  min-height: 100%;
+  padding: 30px;
+  color: var(--blue-900);
+}
+.news-ad-link:hover { color: var(--blue-900); }
+.news-ad-label {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 5px 9px;
+  border: 1px solid rgba(39, 92, 117, 0.2);
+  border-radius: var(--radius-pill);
+  color: var(--blue-700);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.news-ad-eyebrow {
+  color: var(--blue-700);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.news-ad-link h3 {
+  margin: 0;
+  font-size: clamp(21px, 2vw, 26px);
+  line-height: 1.25;
+}
+.news-ad-link p {
+  margin: 0;
+  color: var(--gray-700);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.news-ad-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  color: var(--blue-700);
+  font-size: 13px;
+  font-weight: 700;
+}
+.news-ad-link:focus-visible {
+  outline: 3px solid var(--pastel-blue);
+  outline-offset: -5px;
+}
+
 .news-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent);
@@ -6277,6 +6337,7 @@
 }
 .news-card:hover .news-read-more { color: var(--accent); }
 .news-card:hover .news-read-more::after { width: 100%; }
+.news-ad-card:hover .news-ad-cta { color: var(--blue-900); }
 
 .news-read-more svg {
   box-sizing: content-box;

@@ -65,6 +65,16 @@ export interface NewsItem {
     en: string[];
   };
 }
+
+export interface NewsAdCampaign {
+  id: string;
+  enabled: boolean;
+  title: string;
+  description: string;
+  cta: string;
+  href: string;
+}
+
 export interface GroupStat {
   id: string;
   value: string;

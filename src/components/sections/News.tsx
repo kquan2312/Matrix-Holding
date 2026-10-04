@@ -7,11 +7,12 @@ import {
   Star,
   X,
 } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Container from "../common/Container";
 import { news } from "../../data/news";
+import { newsAdCampaigns } from "../../data/newsAds";
 import { useLanguage } from "../../i18n/LanguageContext";
-import type { NewsBrand, NewsItem } from "../../types";
+import type { NewsAdCampaign, NewsBrand, NewsItem } from "../../types";
 
 const newsFilters = [
   { id: "all", label: "Tất cả tin" },
@@ -92,8 +93,28 @@ function NewsCard({
   );
 }
 
+function NewsAdCard({ campaign }: { campaign: NewsAdCampaign }) {
+  const { t } = useLanguage();
+
+  return (
+    <article className="news-card news-ad-card">
+      <a className="news-card-link news-ad-link" href={campaign.href}>
+        <span className="news-ad-label">{t("Quảng cáo")}</span>
+        <span className="news-ad-eyebrow">MATRIX HOLDING</span>
+        <h3>{t(campaign.title)}</h3>
+        <p>{t(campaign.description)}</p>
+        <span className="news-ad-cta">
+          {t(campaign.cta)}
+          <ArrowUpRight size={18} aria-hidden="true" />
+        </span>
+      </a>
+    </article>
+  );
+}
+
 export default function News({ preview = false }: { preview?: boolean }) {
   const { t } = useLanguage();
+  const newsSectionRef = useRef<HTMLElement>(null);
   const [selectedBrand, setSelectedBrand] =
     useState<(typeof newsFilters)[number]["id"]>("all");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -145,14 +166,24 @@ export default function News({ preview = false }: { preview?: boolean }) {
   const otherNews = sortedNews.slice(3);
   const otherPageCount = Math.ceil(otherNews.length / OTHER_PAGE_SIZE);
   const currentOtherPage = Math.min(otherPage, Math.max(1, otherPageCount));
+  const activeAdCampaigns = newsAdCampaigns.filter((campaign) => campaign.enabled);
+  const adCampaign =
+    activeAdCampaigns.length > 0
+      ? activeAdCampaigns[(currentOtherPage - 1) % activeAdCampaigns.length]
+      : undefined;
   const pageNews = otherNews.slice(
     (currentOtherPage - 1) * OTHER_PAGE_SIZE,
     currentOtherPage * OTHER_PAGE_SIZE,
   );
   const previewNews = [...visibleNews].sort(byDate).slice(0, 3);
 
+  const goToOtherPage = (page: number) => {
+    setOtherPage(page);
+    newsSectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <section id="news" className="section news section-border">
+    <section ref={newsSectionRef} id="news" className="section news section-border">
       <Container>
         <div className="section-label">
           <span>01</span>
@@ -298,7 +329,13 @@ export default function News({ preview = false }: { preview?: boolean }) {
                       {t("Tin tức khác")}
                     </h3>
                     <div className="news-grid">
-                      {pageNews.map((item) => (
+                      {pageNews.slice(0, 3).map((item) => (
+                        <NewsCard key={item.id} item={item} />
+                      ))}
+                      {pageNews.length >= 3 && adCampaign && (
+                        <NewsAdCard campaign={adCampaign} />
+                      )}
+                      {pageNews.slice(3).map((item) => (
                         <NewsCard key={item.id} item={item} />
                       ))}
                     </div>
@@ -309,7 +346,7 @@ export default function News({ preview = false }: { preview?: boolean }) {
                           className="news-pagination-arrow"
                           aria-label={t("Trang trước")}
                           disabled={currentOtherPage === 1}
-                          onClick={() => setOtherPage(currentOtherPage - 1)}
+                          onClick={() => goToOtherPage(currentOtherPage - 1)}
                         >
                           <ChevronLeft size={18} aria-hidden="true" />
                         </button>
@@ -321,7 +358,7 @@ export default function News({ preview = false }: { preview?: boolean }) {
                               className={`news-pagination-page${currentOtherPage === page ? " is-active" : ""}`}
                               aria-label={`${t("Chuyển đến trang")} ${page}`}
                               aria-current={currentOtherPage === page ? "page" : undefined}
-                              onClick={() => setOtherPage(page)}
+                              onClick={() => goToOtherPage(page)}
                             >
                               {page}
                             </button>
@@ -332,7 +369,7 @@ export default function News({ preview = false }: { preview?: boolean }) {
                           className="news-pagination-arrow"
                           aria-label={t("Trang sau")}
                           disabled={currentOtherPage === otherPageCount}
-                          onClick={() => setOtherPage(currentOtherPage + 1)}
+                          onClick={() => goToOtherPage(currentOtherPage + 1)}
                         >
                           <ChevronRight size={18} aria-hidden="true" />
                         </button>
