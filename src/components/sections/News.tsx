@@ -1,4 +1,12 @@
-import { ArrowUpRight, CalendarDays, Search, Star, X } from "lucide-react";
+import {
+  ArrowUpRight,
+  CalendarDays,
+  ChevronLeft,
+  ChevronRight,
+  Search,
+  Star,
+  X,
+} from "lucide-react";
 import { useMemo, useState } from "react";
 import Container from "../common/Container";
 import { news } from "../../data/news";
@@ -19,6 +27,20 @@ const brandLabels: Record<NewsBrand, string> = {
   ventures: "Matrix Ventures",
   academy: "Matrix Academy",
 };
+
+const categorySearchAliases: Record<string, string[]> = {
+  "Bất động sản": ["bds", "bat dong san", "real estate"],
+  "Kinh tế": ["kinh te", "economy", "economic"],
+  "Vận chuyển": ["van chuyen", "van tai", "logistics", "transport"],
+};
+
+function normalizeSearchText(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[đĐ]/g, "d")
+    .toLowerCase();
+}
 
 const OTHER_PAGE_SIZE = 6;
 
@@ -74,8 +96,17 @@ export default function News({ preview = false }: { preview?: boolean }) {
   const { t } = useLanguage();
   const [selectedBrand, setSelectedBrand] =
     useState<(typeof newsFilters)[number]["id"]>("all");
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [query, setQuery] = useState("");
-  const [otherLimit, setOtherLimit] = useState(OTHER_PAGE_SIZE);
+  const [otherPage, setOtherPage] = useState(1);
+
+  const categories = useMemo(
+    () =>
+      Array.from(
+        new Set(news.flatMap((item) => (item.category ? [item.category] : []))),
+      ).sort((a, b) => t(a).localeCompare(t(b))),
+    [t],
+  );
 
   const counts = useMemo(() => {
     const result: Record<string, number> = { all: news.length };
@@ -85,18 +116,25 @@ export default function News({ preview = false }: { preview?: boolean }) {
     return result;
   }, []);
 
-  const keyword = query.trim().toLowerCase();
+  const keyword = normalizeSearchText(query.trim());
 
   const visibleNews = useMemo(() => {
     return news.filter((item) => {
       const matchBrand = selectedBrand === "all" || item.brand === selectedBrand;
+      const matchCategory =
+        !selectedCategory || item.category === selectedCategory;
+      const itemSearchText = normalizeSearchText(
+        [t(item.title), t(item.description), t(item.category ?? ""), t(brandLabels[item.brand])]
+          .join(" "),
+      );
+      const aliases = categorySearchAliases[item.category ?? ""] ?? [];
       const matchQuery =
         !keyword ||
-        t(item.title).toLowerCase().includes(keyword) ||
-        t(item.description).toLowerCase().includes(keyword);
-      return matchBrand && matchQuery;
+        itemSearchText.includes(keyword) ||
+        aliases.some((alias) => normalizeSearchText(alias).includes(keyword));
+      return matchBrand && matchCategory && matchQuery;
     });
-  }, [selectedBrand, keyword, t]);
+  }, [selectedBrand, selectedCategory, keyword, t]);
 
   const byDate = (a: NewsItem, b: NewsItem) =>
     b.publishedAt.localeCompare(a.publishedAt);
@@ -105,6 +143,12 @@ export default function News({ preview = false }: { preview?: boolean }) {
   const sortedNews = visibleNews.filter((item) => !item.featured).sort(byDate);
   const [leadNews, ...sideNews] = sortedNews.slice(0, 3);
   const otherNews = sortedNews.slice(3);
+  const otherPageCount = Math.ceil(otherNews.length / OTHER_PAGE_SIZE);
+  const currentOtherPage = Math.min(otherPage, Math.max(1, otherPageCount));
+  const pageNews = otherNews.slice(
+    (currentOtherPage - 1) * OTHER_PAGE_SIZE,
+    currentOtherPage * OTHER_PAGE_SIZE,
+  );
   const previewNews = [...visibleNews].sort(byDate).slice(0, 3);
 
   return (
@@ -137,7 +181,7 @@ export default function News({ preview = false }: { preview?: boolean }) {
                       aria-pressed={selectedBrand === filter.id}
                       onClick={() => {
                         setSelectedBrand(filter.id);
-                        setOtherLimit(OTHER_PAGE_SIZE);
+                        setOtherPage(1);
                       }}
                     >
                       {t(filter.label)}
@@ -146,23 +190,52 @@ export default function News({ preview = false }: { preview?: boolean }) {
                   ))}
                 </div>
 
-                <label className="news-search">
-                  <Search size={16} aria-hidden="true" />
-                  <input
-                    type="search"
-                    value={query}
-                    placeholder={t("Tìm kiếm tin tức...")}
-                    onChange={(e) => {
-                      setQuery(e.target.value);
-                      setOtherLimit(OTHER_PAGE_SIZE);
-                    }}
-                  />
-                  {query && (
-                    <button type="button" aria-label={t("Xóa tìm kiếm")} onClick={() => setQuery("")}>
-                      <X size={14} />
-                    </button>
-                  )}
-                </label>
+                <div className="news-search-row">
+                  <span className="news-search-label">{t("Tìm kiếm tin tức")}</span>
+                  <div className="news-search-controls">
+                    <select
+                      className="news-category-select"
+                      aria-label={t("Lọc theo danh mục")}
+                      value={selectedCategory}
+                      onChange={(e) => {
+                        setSelectedCategory(e.target.value);
+                        setOtherPage(1);
+                      }}
+                    >
+                      <option value="">{t("Tất cả danh mục")}</option>
+                      {categories.map((category) => (
+                        <option key={category} value={category}>
+                          {t(category)}
+                        </option>
+                      ))}
+                    </select>
+                    <div className="news-search">
+                      <Search size={18} aria-hidden="true" />
+                      <input
+                        type="search"
+                        value={query}
+                        aria-label={t("Tìm kiếm tin tức")}
+                        placeholder={t("Tìm theo tiêu đề hoặc nội dung...")}
+                        onChange={(e) => {
+                          setQuery(e.target.value);
+                          setOtherPage(1);
+                        }}
+                      />
+                      {query && (
+                        <button
+                          type="button"
+                          aria-label={t("Xóa tìm kiếm")}
+                          onClick={() => {
+                            setQuery("");
+                            setOtherPage(1);
+                          }}
+                        >
+                          <X size={14} />
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -183,6 +256,8 @@ export default function News({ preview = false }: { preview?: boolean }) {
                   onClick={() => {
                     setQuery("");
                     setSelectedBrand("all");
+                    setSelectedCategory("");
+                    setOtherPage(1);
                   }}
                 >
                   {t("Xóa bộ lọc")}
@@ -223,20 +298,45 @@ export default function News({ preview = false }: { preview?: boolean }) {
                       {t("Tin tức khác")}
                     </h3>
                     <div className="news-grid">
-                      {otherNews.slice(0, otherLimit).map((item) => (
+                      {pageNews.map((item) => (
                         <NewsCard key={item.id} item={item} />
                       ))}
                     </div>
-                    {otherLimit < otherNews.length && (
-                      <div className="news-load-more">
+                    {otherPageCount > 1 && (
+                      <nav className="news-pagination" aria-label={t("Phân trang tin tức")}>
                         <button
                           type="button"
-                          onClick={() => setOtherLimit((n) => n + OTHER_PAGE_SIZE)}
+                          className="news-pagination-arrow"
+                          aria-label={t("Trang trước")}
+                          disabled={currentOtherPage === 1}
+                          onClick={() => setOtherPage(currentOtherPage - 1)}
                         >
-                          {t("Xem thêm tin")}
-                          <span>{otherNews.length - otherLimit}</span>
+                          <ChevronLeft size={18} aria-hidden="true" />
                         </button>
-                      </div>
+                        {Array.from({ length: otherPageCount }, (_, index) => index + 1).map(
+                          (page) => (
+                            <button
+                              key={page}
+                              type="button"
+                              className={`news-pagination-page${currentOtherPage === page ? " is-active" : ""}`}
+                              aria-label={`${t("Chuyển đến trang")} ${page}`}
+                              aria-current={currentOtherPage === page ? "page" : undefined}
+                              onClick={() => setOtherPage(page)}
+                            >
+                              {page}
+                            </button>
+                          ),
+                        )}
+                        <button
+                          type="button"
+                          className="news-pagination-arrow"
+                          aria-label={t("Trang sau")}
+                          disabled={currentOtherPage === otherPageCount}
+                          onClick={() => setOtherPage(currentOtherPage + 1)}
+                        >
+                          <ChevronRight size={18} aria-hidden="true" />
+                        </button>
+                      </nav>
                     )}
                   </section>
                 )}

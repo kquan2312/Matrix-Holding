@@ -461,26 +461,26 @@ export const news: NewsItem[] = [
   },
   {
     id: "ket-noi-co-hoi-dau-tu-phu-hop",
-    title: "Đánh giá cơ hội đầu tư bằng góc nhìn dài hạn",
-    slug: "danh-gia-co-hoi-dau-tu-bang-goc-nhin-dai-han",
+    title: "Đánh giá cơ hội đầu tư bất động sản bằng góc nhìn dài hạn",
+    slug: "danh-gia-co-hoi-dau-tu-bat-dong-san-bang-goc-nhin-dai-han",
     description:
-      "Cơ hội đầu tư cần được xem xét cùng mức độ phù hợp chiến lược, năng lực triển khai và khả năng tạo giá trị bền vững.",
+      "Cơ hội bất động sản cần được xem xét cùng nhu cầu thị trường, năng lực triển khai và định hướng đầu tư dài hạn.",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=85",
     date: "10.02.2026",
     publishedAt: "2026-02-10",
-    category: "Đầu tư",
+    category: "Bất động sản",
     brand: "ventures",
     content: {
       vi: [
-        "Một cơ hội hấp dẫn cần được đánh giá trong bối cảnh mục tiêu và năng lực hiện có của doanh nghiệp. Việc tìm hiểu thị trường, mô hình hoạt động và các yếu tố bất định giúp hình thành góc nhìn đầy đủ hơn.",
-        "Bên cạnh tiềm năng tăng trưởng, doanh nghiệp nên xem xét khả năng triển khai, nhu cầu nguồn lực và mức độ tương thích với định hướng dài hạn. Các giả định quan trọng cần được kiểm chứng trước khi đưa ra quyết định.",
-        "Tư duy dài hạn giúp cân bằng giữa cơ hội trước mắt và nền tảng cần xây dựng để phát triển. Một quy trình đánh giá có kỷ luật hỗ trợ quyết định minh bạch và phù hợp hơn.",
+        "Cơ hội bất động sản cần được đánh giá trong bối cảnh nhu cầu thị trường, vị trí và mục tiêu phát triển của doanh nghiệp. Việc kiểm chứng thông tin giúp hình thành góc nhìn đầy đủ hơn.",
+        "Bên cạnh tiềm năng tăng trưởng, doanh nghiệp nên xem xét khả năng triển khai, nhu cầu nguồn lực và các yếu tố có thể ảnh hưởng đến dự án. Những giả định quan trọng cần được kiểm chứng trước khi quyết định.",
+        "Tư duy dài hạn giúp cân bằng cơ hội trước mắt với giá trị sử dụng và khả năng phát triển bền vững. Một quy trình đánh giá có kỷ luật hỗ trợ quyết định minh bạch hơn.",
       ],
       en: [
-        "An attractive opportunity should be assessed in the context of a business's goals and capabilities. Understanding the market, operating model, and uncertainties can provide a more complete view.",
-        "Alongside growth potential, businesses should consider execution capacity, resource needs, and fit with long-term direction. Important assumptions should be tested before decisions are made.",
-        "A long-term perspective balances immediate opportunities with the foundations required for growth. A disciplined evaluation process supports more transparent and informed decisions.",
+        "Real estate opportunities should be assessed in the context of market demand, location, and a business's development goals. Verifying information provides a more complete view.",
+        "Alongside growth potential, businesses should consider execution capacity, resource needs, and factors that may affect a project. Important assumptions should be tested before decisions are made.",
+        "A long-term perspective balances immediate opportunities with usability and sustainable development. A disciplined evaluation process supports more transparent decisions.",
       ],
     },
   },
@@ -531,6 +531,443 @@ export const news: NewsItem[] = [
         "The nature of work can change as technology and market needs develop. Individuals can maintain their expertise while staying ready to build skills that support their roles.",
         "Digital skills, analytical thinking, communication, and collaboration are useful across many fields. Learning choices should connect to career goals and real situations that need to be handled.",
         "Businesses can support this process by creating opportunities to practice, share knowledge, and recognize progress. Capability development is an ongoing journey that benefits both individuals and organizations.",
+      ],
+    },
+  },
+  {
+    id: "tong-ket-hanh-trinh-he-sinh-thai-2025",
+    title: "Nhìn lại hành trình phát triển hệ sinh thái năm 2025",
+    slug: "nhin-lai-hanh-trinh-phat-trien-he-sinh-thai-nam-2025",
+    description:
+      "Những bài học về kết nối, phối hợp và phát triển năng lực tạo nền tảng cho chặng đường tiếp theo.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=85",
+    date: "28.12.2025",
+    publishedAt: "2025-12-28",
+    category: "Hệ sinh thái",
+    brand: "network",
+    content: {
+      vi: [
+        "Một năm phát triển mang đến nhiều cơ hội để các đơn vị nhìn lại cách kết nối nguồn lực và phối hợp trong công việc. Những trao đổi thực tế giúp làm rõ thế mạnh, nhu cầu và hướng hợp tác phù hợp.",
+        "Các kinh nghiệm tích lũy là cơ sở để tiếp tục hoàn thiện hoạt động, xây dựng quan hệ bền vững và chuẩn bị cho những mục tiêu dài hạn.",
+      ],
+      en: [
+        "A year of development offers an opportunity for teams to review how they connect resources and work together. Practical conversations help clarify strengths, needs, and areas for collaboration.",
+        "The experience gained provides a foundation for improving operations, building lasting relationships, and preparing for long-term goals.",
+      ],
+    },
+  },
+  {
+    id: "lap-ke-hoach-kinh-doanh-linh-hoat",
+    title: "Lập kế hoạch kinh doanh linh hoạt trước biến động",
+    slug: "lap-ke-hoach-kinh-doanh-linh-hoat-truoc-bien-dong",
+    description:
+      "Kịch bản rõ ràng và các mốc rà soát định kỳ giúp doanh nghiệp chủ động điều chỉnh ưu tiên.",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=85",
+    date: "14.12.2025",
+    publishedAt: "2025-12-14",
+    category: "Góc nhìn",
+    brand: "ventures",
+    content: {
+      vi: [
+        "Kế hoạch kinh doanh hiệu quả cần vừa xác định mục tiêu, vừa tạo không gian để thích ứng khi điều kiện thị trường thay đổi. Những giả định quan trọng nên được ghi nhận và theo dõi.",
+        "Rà soát tiến độ theo chu kỳ giúp đội ngũ nhận biết sớm khoảng cách so với mục tiêu, từ đó điều chỉnh nguồn lực và thứ tự ưu tiên một cách có cơ sở.",
+      ],
+      en: [
+        "An effective business plan sets clear goals while leaving room to adapt as market conditions change. Important assumptions should be documented and monitored.",
+        "Periodic reviews help teams spot gaps early and adjust resources and priorities based on evidence.",
+      ],
+    },
+  },
+  {
+    id: "xay-dung-trai-nghiem-khach-hang-nhat-quan",
+    title: "Xây dựng trải nghiệm khách hàng nhất quán",
+    slug: "xay-dung-trai-nghiem-khach-hang-nhat-quan",
+    description:
+      "Lắng nghe phản hồi ở từng điểm chạm giúp doanh nghiệp cải thiện hành trình khách hàng.",
+    image:
+      "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=85",
+    date: "30.11.2025",
+    publishedAt: "2025-11-30",
+    category: "Khách hàng",
+    brand: "connect",
+    content: {
+      vi: [
+        "Trải nghiệm khách hàng được hình thành qua nhiều tương tác, từ lần đầu tìm hiểu đến quá trình sử dụng dịch vụ. Sự nhất quán về thông tin và cách hỗ trợ giúp khách hàng hiểu rõ điều có thể kỳ vọng.",
+        "Thu thập phản hồi có hệ thống giúp đội ngũ nhận ra điểm gây khó khăn và ưu tiên những cải thiện thiết thực.",
+      ],
+      en: [
+        "Customer experience is shaped by many interactions, from initial discovery to ongoing service. Consistent information and support help customers understand what to expect.",
+        "Collecting feedback systematically helps teams identify friction and prioritize practical improvements.",
+      ],
+    },
+  },
+  {
+    id: "van-hoa-chia-se-kien-thuc",
+    title: "Khuyến khích văn hóa chia sẻ kiến thức trong đội ngũ",
+    slug: "khuyen-khich-van-hoa-chia-se-kien-thuc-trong-doi-ngu",
+    description:
+      "Thói quen chia sẻ kinh nghiệm giúp tri thức được lan tỏa và hỗ trợ cộng tác hiệu quả hơn.",
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=85",
+    date: "16.11.2025",
+    publishedAt: "2025-11-16",
+    category: "Con người",
+    brand: "academy",
+    content: {
+      vi: [
+        "Kiến thức tích lũy trong công việc sẽ tạo ra giá trị lớn hơn khi được chia sẻ đúng lúc và đúng cách. Những buổi trao đổi ngắn, tài liệu dễ tìm và ví dụ thực tế đều có thể hỗ trợ việc học hỏi.",
+        "Khi việc đặt câu hỏi và chia sẻ bài học được khuyến khích, đội ngũ có thêm cơ hội phối hợp và tránh lặp lại những khó khăn đã gặp.",
+      ],
+      en: [
+        "Knowledge gained through work creates more value when it is shared at the right time and in an accessible way. Short discussions, searchable resources, and practical examples can all support learning.",
+        "When asking questions and sharing lessons are encouraged, teams can collaborate more effectively and avoid repeating known challenges.",
+      ],
+    },
+  },
+  {
+    id: "ung-dung-du-lieu-trong-quyet-dinh",
+    title: "Ứng dụng dữ liệu để hỗ trợ quyết định kinh doanh",
+    slug: "ung-dung-du-lieu-de-ho-tro-quyet-dinh-kinh-doanh",
+    description:
+      "Chỉ số phù hợp và nguồn dữ liệu đáng tin cậy giúp quyết định minh bạch, dễ đánh giá.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
+    date: "02.11.2025",
+    publishedAt: "2025-11-02",
+    category: "Công nghệ",
+    brand: "ventures",
+    content: {
+      vi: [
+        "Dữ liệu hỗ trợ quyết định tốt hơn khi được gắn với câu hỏi cụ thể và mục tiêu rõ ràng. Việc lựa chọn một số chỉ số phù hợp giúp đội ngũ tập trung vào tín hiệu quan trọng.",
+        "Kiểm tra chất lượng dữ liệu và thống nhất cách diễn giải là bước cần thiết để kết quả phân tích có thể được sử dụng đáng tin cậy.",
+      ],
+      en: [
+        "Data supports better decisions when it is connected to a specific question and a clear objective. Selecting a focused set of metrics helps teams pay attention to meaningful signals.",
+        "Checking data quality and aligning on interpretation are essential for using analysis with confidence.",
+      ],
+    },
+  },
+  {
+    id: "ket-noi-doanh-nghiep-va-chuyen-gia",
+    title: "Kết nối đối tác vận chuyển trong chuỗi cung ứng",
+    slug: "ket-noi-doi-tac-van-chuyen-trong-chuoi-cung-ung",
+    description:
+      "Lựa chọn đối tác vận chuyển phù hợp giúp chuỗi cung ứng phối hợp hiệu quả và đáp ứng nhu cầu thực tế.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=85",
+    date: "19.10.2025",
+    publishedAt: "2025-10-19",
+    category: "Vận chuyển",
+    brand: "connect",
+    content: {
+      vi: [
+        "Hoạt động vận chuyển hiệu quả bắt đầu từ việc xác định nhu cầu giao nhận, phạm vi phục vụ và yêu cầu về thời gian. Các tiêu chí này giúp doanh nghiệp tìm đối tác phù hợp hơn.",
+        "Thống nhất đầu mối phối hợp, quy trình cập nhật và cách xử lý tình huống giúp các bên theo dõi tiến độ và duy trì chất lượng dịch vụ.",
+      ],
+      en: [
+        "Effective transportation begins with a clear understanding of delivery needs, service coverage, and timing requirements. These criteria help businesses find suitable partners.",
+        "Agreeing on points of contact, update processes, and exception handling helps partners track progress and maintain service quality.",
+      ],
+    },
+  },
+  {
+    id: "quan-tri-rui-ro-trong-du-an",
+    title: "Chủ động nhận diện rủi ro trong quá trình triển khai",
+    slug: "chu-dong-nhan-dien-rui-ro-trong-qua-trinh-trien-khai",
+    description:
+      "Trao đổi sớm về rủi ro và phương án ứng phó giúp dự án duy trì tiến độ thực tế.",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=85",
+    date: "05.10.2025",
+    publishedAt: "2025-10-05",
+    category: "Quản trị",
+    brand: "network",
+    content: {
+      vi: [
+        "Rủi ro có thể xuất hiện ở nhiều khâu, từ phạm vi công việc đến nguồn lực và sự phụ thuộc giữa các bên. Việc ghi nhận dấu hiệu sớm giúp nhóm có thời gian đánh giá ảnh hưởng.",
+        "Một phương án ứng phó rõ người phụ trách và thời điểm rà soát sẽ giúp dự án phản hồi chủ động hơn khi điều kiện thay đổi.",
+      ],
+      en: [
+        "Risks can arise across project scope, resources, and dependencies. Recording early signals gives the team time to assess their impact.",
+        "A response plan with clear ownership and review points helps a project react proactively when conditions change.",
+      ],
+    },
+  },
+  {
+    id: "hoc-tap-lien-tuc-tai-noi-lam-viec",
+    title: "Tạo điều kiện học tập liên tục tại nơi làm việc",
+    slug: "tao-dieu-kien-hoc-tap-lien-tuc-tai-noi-lam-viec",
+    description:
+      "Cơ hội thực hành và phản hồi thường xuyên giúp kiến thức mới được áp dụng vào công việc.",
+    image:
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85",
+    date: "21.09.2025",
+    publishedAt: "2025-09-21",
+    category: "Đào tạo",
+    brand: "academy",
+    content: {
+      vi: [
+        "Học tập tại nơi làm việc hiệu quả khi nội dung gắn với nhiệm vụ thực tế và người học có cơ hội thử áp dụng kiến thức mới.",
+        "Phản hồi kịp thời từ đồng nghiệp và quản lý giúp nhận biết điều đã tiến bộ cũng như bước tiếp theo cần rèn luyện.",
+      ],
+      en: [
+        "Workplace learning is most effective when it relates to real tasks and gives people an opportunity to apply new knowledge.",
+        "Timely feedback from colleagues and managers helps identify progress and the next skills to develop.",
+      ],
+    },
+  },
+  {
+    id: "mo-hinh-hop-tac-ben-vung",
+    title: "Thiết kế mô hình hợp tác hướng tới giá trị bền vững",
+    slug: "thiet-ke-mo-hinh-hop-tac-huong-toi-gia-tri-ben-vung",
+    description:
+      "Mục tiêu chung, vai trò minh bạch và cách đánh giá rõ ràng là nền tảng cho quan hệ hợp tác dài hạn.",
+    image:
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85",
+    date: "07.09.2025",
+    publishedAt: "2025-09-07",
+    category: "Hợp tác",
+    brand: "connect",
+    content: {
+      vi: [
+        "Quan hệ hợp tác bền vững cần bắt đầu từ mục tiêu mà các bên cùng theo đuổi. Việc xác định vai trò và nguyên tắc phối hợp giúp công việc được triển khai minh bạch.",
+        "Thường xuyên đánh giá kết quả và trao đổi cởi mở giúp mô hình hợp tác thích nghi với nhu cầu mới mà vẫn giữ được định hướng chung.",
+      ],
+      en: [
+        "Sustainable partnerships start with goals shared by all participants. Clear roles and ways of working make collaboration more transparent.",
+        "Regular reviews and open communication help a partnership adapt to new needs while maintaining a common direction.",
+      ],
+    },
+  },
+  {
+    id: "xay-dung-thuong-hieu-tu-niem-tin",
+    title: "Xây dựng thương hiệu từ sự tin cậy nhất quán",
+    slug: "xay-dung-thuong-hieu-tu-su-tin-cay-nhat-quan",
+    description:
+      "Cam kết được thực hiện nhất quán qua từng trải nghiệm là nền tảng của niềm tin thương hiệu.",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85",
+    date: "24.08.2025",
+    publishedAt: "2025-08-24",
+    category: "Thương hiệu",
+    brand: "network",
+    content: {
+      vi: [
+        "Thương hiệu được cảm nhận qua những gì doanh nghiệp làm mỗi ngày, không chỉ qua thông điệp truyền thông. Trải nghiệm nhất quán giúp khách hàng hiểu rõ giá trị mà doanh nghiệp theo đuổi.",
+        "Lắng nghe phản hồi và giữ đúng cam kết là những cách thiết thực để nuôi dưỡng niềm tin theo thời gian.",
+      ],
+      en: [
+        "A brand is experienced through what a business does every day, not only through its communications. Consistent experiences help customers understand the value it stands for.",
+        "Listening to feedback and keeping commitments are practical ways to build trust over time.",
+      ],
+    },
+  },
+  {
+    id: "doi-moi-tu-van-hanh",
+    title: "Đổi mới vận hành bắt đầu từ việc lắng nghe đội ngũ",
+    slug: "doi-moi-van-hanh-bat-dau-tu-viec-lang-nghe-doi-ngu",
+    description:
+      "Ý kiến từ những người trực tiếp thực hiện giúp cải tiến quy trình sát với thực tế hơn.",
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=85",
+    date: "10.08.2025",
+    publishedAt: "2025-08-10",
+    category: "Vận hành",
+    brand: "ventures",
+    content: {
+      vi: [
+        "Những người trực tiếp xử lý công việc thường nhận ra sớm các bước gây chậm trễ hoặc khó phối hợp. Tạo không gian để họ chia sẻ giúp vấn đề được mô tả cụ thể hơn.",
+        "Khi thử nghiệm giải pháp, cần theo dõi ảnh hưởng tới chất lượng và khối lượng công việc để quyết định cách áp dụng phù hợp.",
+      ],
+      en: [
+        "People doing the work often spot delays and coordination issues first. Making room for their input helps describe problems more clearly.",
+        "When testing a solution, teams should monitor its effect on quality and workload before deciding how to adopt it.",
+      ],
+    },
+  },
+  {
+    id: "ky-nang-giao-tiep-trong-cong-viec",
+    title: "Nâng cao kỹ năng giao tiếp và phối hợp trong công việc",
+    slug: "nang-cao-ky-nang-giao-tiep-va-phoi-hop-trong-cong-viec",
+    description:
+      "Mục tiêu rõ ràng và cập nhật đúng lúc giúp các nhóm phối hợp nhịp nhàng hơn.",
+    image:
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85",
+    date: "27.07.2025",
+    publishedAt: "2025-07-27",
+    category: "Kỹ năng",
+    brand: "academy",
+    content: {
+      vi: [
+        "Giao tiếp hiệu quả giúp các thành viên hiểu rõ mục tiêu, trách nhiệm và những thông tin cần thiết để hoàn thành công việc.",
+        "Thói quen xác nhận lại quyết định, thời hạn và người phụ trách giúp giảm hiểu nhầm khi nhiều nhóm cùng tham gia.",
+      ],
+      en: [
+        "Effective communication helps people understand goals, responsibilities, and the information needed to complete their work.",
+        "Confirming decisions, deadlines, and owners helps reduce misunderstandings when several teams are involved.",
+      ],
+    },
+  },
+  {
+    id: "danh-gia-hieu-qua-chien-luoc",
+    title: "Theo dõi xu hướng kinh tế để nhận diện cơ hội kinh doanh",
+    slug: "theo-doi-xu-huong-kinh-te-de-nhan-dien-co-hoi-kinh-doanh",
+    description:
+      "Theo dõi biến động thị trường và các chỉ số kinh tế giúp doanh nghiệp đánh giá cơ hội có cơ sở hơn.",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=85",
+    date: "13.07.2025",
+    publishedAt: "2025-07-13",
+    category: "Kinh tế",
+    brand: "ventures",
+    content: {
+      vi: [
+        "Biến động kinh tế và thị trường có thể ảnh hưởng đến nhu cầu, chi phí và kế hoạch phát triển của doanh nghiệp. Theo dõi các chỉ số liên quan giúp đội ngũ có thêm dữ liệu để đánh giá bối cảnh.",
+        "Kết hợp thông tin thị trường với năng lực triển khai và mục tiêu dài hạn giúp doanh nghiệp cân nhắc cơ hội thận trọng hơn.",
+      ],
+      en: [
+        "Economic and market changes can affect business demand, costs, and development plans. Monitoring relevant indicators gives teams more information to assess the environment.",
+        "Combining market information with execution capabilities and long-term goals helps businesses evaluate opportunities more thoughtfully.",
+      ],
+    },
+  },
+  {
+    id: "ket-noi-cong-dong-doanh-nghiep",
+    title: "Kết nối cộng đồng doanh nghiệp cùng phát triển",
+    slug: "ket-noi-cong-dong-doanh-nghiep-cung-phat-trien",
+    description:
+      "Chia sẻ kinh nghiệm và góc nhìn đa chiều mở ra cơ hội học hỏi giữa các doanh nghiệp.",
+    image:
+      "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=1600&q=85",
+    date: "29.06.2025",
+    publishedAt: "2025-06-29",
+    category: "Cộng đồng",
+    brand: "connect",
+    content: {
+      vi: [
+        "Cộng đồng doanh nghiệp là không gian để các đơn vị trao đổi kinh nghiệm và cập nhật những thay đổi trong môi trường kinh doanh.",
+        "Những kết nối dựa trên sự tin cậy có thể tạo điều kiện cho các sáng kiến chung và cơ hội hợp tác phù hợp.",
+      ],
+      en: [
+        "A business community gives organizations a place to exchange experience and discuss changes in the business environment.",
+        "Trust-based connections can support shared initiatives and relevant opportunities to collaborate.",
+      ],
+    },
+  },
+  {
+    id: "quan-ly-thay-doi-trong-to-chuc",
+    title: "Đồng hành cùng đội ngũ trong quá trình thay đổi",
+    slug: "dong-hanh-cung-doi-ngu-trong-qua-trinh-thay-doi",
+    description:
+      "Giải thích lý do, lắng nghe băn khoăn và cập nhật tiến độ giúp quá trình chuyển đổi rõ ràng hơn.",
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=85",
+    date: "15.06.2025",
+    publishedAt: "2025-06-15",
+    category: "Quản trị",
+    brand: "network",
+    content: {
+      vi: [
+        "Thay đổi trong tổ chức thường tác động đến quy trình và vai trò hằng ngày. Chia sẻ rõ lý do và mục tiêu giúp đội ngũ hiểu bối cảnh của những điều chỉnh.",
+        "Lắng nghe câu hỏi, phản hồi thường xuyên và hỗ trợ trong giai đoạn chuyển tiếp giúp các thành viên chủ động thích nghi.",
+      ],
+      en: [
+        "Organizational change often affects everyday processes and roles. Explaining the reasons and goals helps teams understand the context for adjustments.",
+        "Listening to questions, sharing regular updates, and offering support can help people adapt with confidence.",
+      ],
+    },
+  },
+  {
+    id: "tu-duy-khach-hang-trong-phat-trien-san-pham",
+    title: "Đưa góc nhìn khách hàng vào quá trình phát triển sản phẩm",
+    slug: "dua-goc-nhin-khach-hang-vao-qua-trinh-phat-trien-san-pham",
+    description:
+      "Nghiên cứu nhu cầu thực tế giúp sản phẩm giải quyết đúng vấn đề và phù hợp với người dùng.",
+    image:
+      "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=85",
+    date: "01.06.2025",
+    publishedAt: "2025-06-01",
+    category: "Khách hàng",
+    brand: "ventures",
+    content: {
+      vi: [
+        "Hiểu nhu cầu và bối cảnh sử dụng giúp đội ngũ xác định vấn đề cần ưu tiên trước khi phát triển giải pháp.",
+        "Phản hồi từ người dùng trong quá trình thử nghiệm cung cấp cơ sở để hoàn thiện sản phẩm và cải thiện trải nghiệm.",
+      ],
+      en: [
+        "Understanding customer needs and context helps teams identify which problems to prioritize before developing a solution.",
+        "Feedback from users during testing provides a basis for refining the product and improving its experience.",
+      ],
+    },
+  },
+  {
+    id: "phat-trien-nang-luc-quan-ly",
+    title: "Phát triển năng lực quản lý cho đội ngũ kế cận",
+    slug: "phat-trien-nang-luc-quan-ly-cho-doi-ngu-ke-can",
+    description:
+      "Trải nghiệm thực tế, cố vấn và phản hồi giúp nhân sự chuẩn bị tốt hơn cho trách nhiệm mới.",
+    image:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=85",
+    date: "18.05.2025",
+    publishedAt: "2025-05-18",
+    category: "Lãnh đạo",
+    brand: "academy",
+    content: {
+      vi: [
+        "Năng lực quản lý được hình thành qua việc thực hành, học hỏi từ tình huống cụ thể và nhận phản hồi phù hợp.",
+        "Cố vấn và cơ hội đảm nhận trách nhiệm theo từng bước giúp nhân sự sẵn sàng hơn với vai trò mới.",
+      ],
+      en: [
+        "Management capability develops through practice, learning from specific situations, and receiving useful feedback.",
+        "Mentoring and gradual opportunities to take ownership can help people prepare for new responsibilities.",
+      ],
+    },
+  },
+  {
+    id: "hop-tac-tao-gia-tri-dai-han",
+    title: "Hợp tác để tạo giá trị dài hạn cho các bên",
+    slug: "hop-tac-de-tao-gia-tri-dai-han-cho-cac-ben",
+    description:
+      "Quan hệ hợp tác hiệu quả cân bằng lợi ích, năng lực đóng góp và mục tiêu chung.",
+    image:
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=85",
+    date: "04.05.2025",
+    publishedAt: "2025-05-04",
+    category: "Hợp tác",
+    brand: "connect",
+    content: {
+      vi: [
+        "Giá trị dài hạn được tạo ra khi các bên hiểu rõ lợi ích, năng lực đóng góp và mục tiêu có thể cùng theo đuổi.",
+        "Trao đổi minh bạch và đánh giá định kỳ giúp quan hệ hợp tác tiếp tục phù hợp khi nhu cầu thay đổi.",
+      ],
+      en: [
+        "Long-term value emerges when participants understand their interests, contributions, and shared goals.",
+        "Transparent communication and periodic reviews help a partnership remain relevant as needs evolve.",
+      ],
+    },
+  },
+  {
+    id: "nen-tang-van-hanh-ben-vung",
+    title: "Củng cố nền tảng vận hành cho tăng trưởng bền vững",
+    slug: "cung-co-nen-tang-van-hanh-cho-tang-truong-ben-vung",
+    description:
+      "Quy trình rõ ràng và trách nhiệm phù hợp giúp tổ chức duy trì chất lượng khi mở rộng.",
+    image:
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85",
+    date: "20.04.2025",
+    publishedAt: "2025-04-20",
+    category: "Vận hành",
+    brand: "network",
+    content: {
+      vi: [
+        "Tăng trưởng bền vững cần nền tảng vận hành có thể hỗ trợ quy mô lớn hơn mà vẫn giữ chất lượng và trách nhiệm.",
+        "Rà soát quy trình, phân định vai trò và học hỏi từ kết quả giúp tổ chức củng cố nền tảng trước những bước phát triển tiếp theo.",
+      ],
+      en: [
+        "Sustainable growth needs operating foundations that can support greater scale while maintaining quality and accountability.",
+        "Reviewing processes, clarifying roles, and learning from outcomes help an organization prepare for its next stage.",
       ],
     },
   },

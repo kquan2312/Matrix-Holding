@@ -402,6 +402,28 @@ const englishTranslations: Record<string, string> = {
   "Tên doanh nghiệp": "Company name",
   "Mã số thuế": "Tax ID",
   "Tất cả tin": "All news",
+  "Tìm kiếm tin tức": "Search news",
+  "Tìm theo tiêu đề hoặc nội dung...": "Search by title or content...",
+  "Lọc theo danh mục": "Filter by category",
+  "Tất cả danh mục": "All categories",
+  "Kinh tế": "Economy",
+  "Vận chuyển": "Transportation",
+  "Đánh giá cơ hội đầu tư bất động sản bằng góc nhìn dài hạn":
+    "Taking a long-term view of real estate investment opportunities",
+  "Cơ hội bất động sản cần được xem xét cùng nhu cầu thị trường, năng lực triển khai và định hướng đầu tư dài hạn.":
+    "Real estate opportunities should be assessed alongside market demand, execution capabilities, and long-term investment direction.",
+  "Kết nối đối tác vận chuyển trong chuỗi cung ứng":
+    "Connecting transportation partners across the supply chain",
+  "Lựa chọn đối tác vận chuyển phù hợp giúp chuỗi cung ứng phối hợp hiệu quả và đáp ứng nhu cầu thực tế.":
+    "Choosing the right transportation partners helps supply chains coordinate effectively and meet practical needs.",
+  "Theo dõi xu hướng kinh tế để nhận diện cơ hội kinh doanh":
+    "Tracking economic trends to identify business opportunities",
+  "Theo dõi biến động thị trường và các chỉ số kinh tế giúp doanh nghiệp đánh giá cơ hội có cơ sở hơn.":
+    "Monitoring market changes and economic indicators helps businesses assess opportunities with better context.",
+  "Phân trang tin tức": "News pagination",
+  "Trang trước": "Previous page",
+  "Trang sau": "Next page",
+  "Chuyển đến trang": "Go to page",
   "Lọc tin tức theo thương hiệu": "Filter news by brand",
   "Tin tức nổi bật": "Featured news",
   "Tin tức mới nhất": "Latest news",
@@ -464,6 +486,82 @@ const englishTranslations: Record<string, string> = {
   "Bài viết mẫu về đổi mới, quản trị có trách nhiệm và mục tiêu tạo dựng giá trị dài hạn.":
     "A sample article about innovation, responsible governance, and creating long-term value.",
   "Tin mẫu": "Sample news",
+  "Nhìn lại hành trình phát triển hệ sinh thái năm 2025":
+    "Looking back at the ecosystem's development in 2025",
+  "Những bài học về kết nối, phối hợp và phát triển năng lực tạo nền tảng cho chặng đường tiếp theo.":
+    "Lessons in connection, collaboration, and capability-building lay the groundwork for the next stage.",
+  "Lập kế hoạch kinh doanh linh hoạt trước biến động":
+    "Planning flexibly for business change",
+  "Kịch bản rõ ràng và các mốc rà soát định kỳ giúp doanh nghiệp chủ động điều chỉnh ưu tiên.":
+    "Clear scenarios and regular reviews help businesses adjust priorities proactively.",
+  "Xây dựng trải nghiệm khách hàng nhất quán":
+    "Building a consistent customer experience",
+  "Lắng nghe phản hồi ở từng điểm chạm giúp doanh nghiệp cải thiện hành trình khách hàng.":
+    "Listening at every touchpoint helps businesses improve the customer journey.",
+  "Khuyến khích văn hóa chia sẻ kiến thức trong đội ngũ":
+    "Encouraging a culture of knowledge-sharing",
+  "Thói quen chia sẻ kinh nghiệm giúp tri thức được lan tỏa và hỗ trợ cộng tác hiệu quả hơn.":
+    "Sharing experience helps knowledge spread and supports more effective collaboration.",
+  "Ứng dụng dữ liệu để hỗ trợ quyết định kinh doanh":
+    "Using data to support business decisions",
+  "Chỉ số phù hợp và nguồn dữ liệu đáng tin cậy giúp quyết định minh bạch, dễ đánh giá.":
+    "Relevant metrics and reliable data help make decisions transparent and easier to evaluate.",
+  "Kết nối doanh nghiệp với chuyên gia phù hợp":
+    "Connecting businesses with the right experts",
+  "Xác định rõ nhu cầu và chuyên môn cần thiết giúp hoạt động kết nối tạo ra giá trị thực tế.":
+    "Clearly defining needs and expertise helps introductions create practical value.",
+  "Chủ động nhận diện rủi ro trong quá trình triển khai":
+    "Proactively identifying risks during implementation",
+  "Trao đổi sớm về rủi ro và phương án ứng phó giúp dự án duy trì tiến độ thực tế.":
+    "Early discussion of risks and responses helps projects maintain realistic timelines.",
+  "Tạo điều kiện học tập liên tục tại nơi làm việc":
+    "Supporting continuous learning in the workplace",
+  "Cơ hội thực hành và phản hồi thường xuyên giúp kiến thức mới được áp dụng vào công việc.":
+    "Opportunities to practice and regular feedback help people apply new knowledge at work.",
+  "Thiết kế mô hình hợp tác hướng tới giá trị bền vững":
+    "Designing partnerships for sustainable value",
+  "Mục tiêu chung, vai trò minh bạch và cách đánh giá rõ ràng là nền tảng cho quan hệ hợp tác dài hạn.":
+    "Shared goals, transparent roles, and clear evaluation create a foundation for long-term partnerships.",
+  "Xây dựng thương hiệu từ sự tin cậy nhất quán":
+    "Building a brand through consistent trust",
+  "Cam kết được thực hiện nhất quán qua từng trải nghiệm là nền tảng của niềm tin thương hiệu.":
+    "Consistently honoring commitments across experiences is the foundation of brand trust.",
+  "Đổi mới vận hành bắt đầu từ việc lắng nghe đội ngũ":
+    "Operational innovation starts with listening to teams",
+  "Ý kiến từ những người trực tiếp thực hiện giúp cải tiến quy trình sát với thực tế hơn.":
+    "Input from people doing the work helps make process improvements more practical.",
+  "Nâng cao kỹ năng giao tiếp và phối hợp trong công việc":
+    "Strengthening communication and collaboration at work",
+  "Mục tiêu rõ ràng và cập nhật đúng lúc giúp các nhóm phối hợp nhịp nhàng hơn.":
+    "Clear goals and timely updates help teams work together more smoothly.",
+  "Đánh giá hiệu quả chiến lược bằng mục tiêu đo lường được":
+    "Evaluating strategy with measurable goals",
+  "Liên kết mục tiêu với chỉ số và mốc đánh giá giúp tổ chức theo dõi tiến độ nhất quán.":
+    "Linking goals to metrics and review points helps organizations track progress consistently.",
+  "Kết nối cộng đồng doanh nghiệp cùng phát triển":
+    "Connecting businesses to grow together",
+  "Chia sẻ kinh nghiệm và góc nhìn đa chiều mở ra cơ hội học hỏi giữa các doanh nghiệp.":
+    "Sharing experience and diverse perspectives creates opportunities for businesses to learn from one another.",
+  "Đồng hành cùng đội ngũ trong quá trình thay đổi":
+    "Supporting teams through change",
+  "Giải thích lý do, lắng nghe băn khoăn và cập nhật tiến độ giúp quá trình chuyển đổi rõ ràng hơn.":
+    "Explaining the reasons, listening to concerns, and sharing updates make transitions clearer.",
+  "Đưa góc nhìn khách hàng vào quá trình phát triển sản phẩm":
+    "Bringing the customer perspective into product development",
+  "Nghiên cứu nhu cầu thực tế giúp sản phẩm giải quyết đúng vấn đề và phù hợp với người dùng.":
+    "Researching real needs helps products solve the right problems for their users.",
+  "Phát triển năng lực quản lý cho đội ngũ kế cận":
+    "Developing management capabilities in future leaders",
+  "Trải nghiệm thực tế, cố vấn và phản hồi giúp nhân sự chuẩn bị tốt hơn cho trách nhiệm mới.":
+    "Practical experience, mentoring, and feedback help people prepare for new responsibilities.",
+  "Hợp tác để tạo giá trị dài hạn cho các bên":
+    "Collaborating to create long-term value",
+  "Quan hệ hợp tác hiệu quả cân bằng lợi ích, năng lực đóng góp và mục tiêu chung.":
+    "Effective partnerships balance interests, contributions, and shared goals.",
+  "Củng cố nền tảng vận hành cho tăng trưởng bền vững":
+    "Strengthening operations for sustainable growth",
+  "Quy trình rõ ràng và trách nhiệm phù hợp giúp tổ chức duy trì chất lượng khi mở rộng.":
+    "Clear processes and appropriate accountability help organizations maintain quality as they grow.",
   "Những câu chuyện mới nhất về Matrix Holding sẽ được cập nhật.":
     "The latest Matrix Holding stories are coming soon.",
   "Cơ hội nghề nghiệp": "Career opportunities",
