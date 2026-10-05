@@ -615,8 +615,8 @@
 
 /* Dual CTAs in Hero */
 .hero-cta-group {
-  /* display: flex; */
-  flex-direction: column;
+  display: flex;
+  /* flex-direction: column; */
   gap: 10px;
 }
 
@@ -2276,7 +2276,7 @@
   display: grid;
 
   grid-template-columns:
-    minmax(0, 1.2fr)
+    minmax(0, 1.5fr)
     minmax(280px, 0.8fr);
 
   gap: 100px;
@@ -2878,7 +2878,7 @@
   max-width: 740px;
   font-size: clamp(42px, 5.8vw, 74px);
   font-weight: 500;
-  line-height: 1.02;
+  line-height: 1.2;
   letter-spacing: -0.055em;
 }
 
@@ -2903,7 +2903,7 @@
 .ecosystem-overview-heading,
 .careers-overview-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
   align-items: end;
   gap: 48px;
   margin-bottom: 34px;
@@ -2914,7 +2914,7 @@
   max-width: 760px;
   font-size: clamp(42px, 5.7vw, 72px);
   font-weight: 500;
-  line-height: 0.98;
+  line-height: 1.2;
   letter-spacing: -0.055em;
 }
 
@@ -6031,6 +6031,7 @@
     radial-gradient(ellipse at 100% 0%, rgba(94, 160, 181, 0.2), transparent 52%),
     linear-gradient(145deg, #f7fbfc, #eaf3f5);
 }
+.news-ad-card-latest { margin-top: 20px; }
 .news-ad-link {
   position: relative;
   justify-content: center;
@@ -6478,6 +6479,28 @@
 }
 .news-card-compact .news-info h3 { margin-top: 10px; font-size: 18px; }
 .news-card-compact .news-read-more { margin-top: 14px; }
+
+.news-other-grid { gap: 14px; }
+.news-other-grid > .news-card:not(.news-ad-card) .news-image {
+  aspect-ratio: 16 / 7;
+}
+.news-other-grid > .news-card:not(.news-ad-card) .news-info {
+  padding: 12px 14px 14px;
+}
+.news-other-grid > .news-card:not(.news-ad-card) .news-info h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.news-other-grid > .news-card:not(.news-ad-card) .news-info p {
+  margin-top: 6px;
+  font-size: 11px;
+  line-height: 1.45;
+}
+.news-other-grid > .news-card:not(.news-ad-card) .news-read-more {
+  margin-top: 10px;
+  font-size: 11px;
+}
 
 /* ---------- Pagination + trạng thái rỗng ---------- */
 .news-pagination {

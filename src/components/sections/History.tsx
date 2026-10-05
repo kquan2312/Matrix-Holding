@@ -37,7 +37,7 @@ const milestones = [
 
 export default function History() {
   const { t } = useLanguage();
-  const [selectedMilestone, setSelectedMilestone] = useState(1);
+  const [selectedMilestone, setSelectedMilestone] = useState(milestones.length - 1);
   const milestone = milestones[selectedMilestone];
 
   return (

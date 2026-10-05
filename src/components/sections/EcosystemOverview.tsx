@@ -15,7 +15,12 @@ export default function EcosystemOverview() {
         </div>
 
         <div className="ecosystem-overview-heading">
-          <h2>{t("Bốn hệ sinh thái, cùng kết nối.")}</h2>
+          {/* <h2>{t("Bốn hệ sinh thái, cùng kết nối.")}</h2> */}
+          <h2>
+  {t("Bốn hệ sinh thái,")}
+  <br />
+  {t("cùng kết nối.")}
+</h2>
           <p>{t("Khám phá các hệ sinh thái chuyên biệt được định hướng để đồng hành cùng doanh nghiệp.")}</p>
         </div>
 

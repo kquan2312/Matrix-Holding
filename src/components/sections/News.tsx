@@ -43,7 +43,7 @@ function normalizeSearchText(value: string) {
     .toLowerCase();
 }
 
-const OTHER_PAGE_SIZE = 6;
+const OTHER_PAGE_SIZE = 12;
 
 type CardVariant = "default" | "featured" | "compact" | "lead";
 
@@ -93,11 +93,17 @@ function NewsCard({
   );
 }
 
-function NewsAdCard({ campaign }: { campaign: NewsAdCampaign }) {
+function NewsAdCard({
+  campaign,
+  placement = "grid",
+}: {
+  campaign: NewsAdCampaign;
+  placement?: "grid" | "latest";
+}) {
   const { t } = useLanguage();
 
   return (
-    <article className="news-card news-ad-card">
+    <article className={`news-card news-ad-card news-ad-card-${placement}`}>
       <a className="news-card-link news-ad-link" href={campaign.href}>
         <span className="news-ad-label">{t("Quảng cáo")}</span>
         <span className="news-ad-eyebrow">MATRIX HOLDING</span>
@@ -167,10 +173,15 @@ export default function News({ preview = false }: { preview?: boolean }) {
   const otherPageCount = Math.ceil(otherNews.length / OTHER_PAGE_SIZE);
   const currentOtherPage = Math.min(otherPage, Math.max(1, otherPageCount));
   const activeAdCampaigns = newsAdCampaigns.filter((campaign) => campaign.enabled);
-  const adCampaign =
+  const campaignOffset = (currentOtherPage - 1) * 3;
+  const adCampaigns =
     activeAdCampaigns.length > 0
-      ? activeAdCampaigns[(currentOtherPage - 1) % activeAdCampaigns.length]
-      : undefined;
+      ? [
+          activeAdCampaigns[campaignOffset % activeAdCampaigns.length],
+          activeAdCampaigns[(campaignOffset + 1) % activeAdCampaigns.length],
+          activeAdCampaigns[(campaignOffset + 2) % activeAdCampaigns.length],
+        ]
+      : [];
   const pageNews = otherNews.slice(
     (currentOtherPage - 1) * OTHER_PAGE_SIZE,
     currentOtherPage * OTHER_PAGE_SIZE,
@@ -320,6 +331,9 @@ export default function News({ preview = false }: { preview?: boolean }) {
                         </div>
                       )}
                     </div>
+                    {adCampaigns[0] && (
+                      <NewsAdCard campaign={adCampaigns[0]} placement="latest" />
+                    )}
                   </section>
                 )}
 
@@ -328,14 +342,20 @@ export default function News({ preview = false }: { preview?: boolean }) {
                     <h3 className="news-group-heading" id="news-other">
                       {t("Tin tức khác")}
                     </h3>
-                    <div className="news-grid">
-                      {pageNews.slice(0, 3).map((item) => (
+                    <div className="news-grid news-other-grid">
+                      {pageNews.slice(0, 1).map((item) => (
                         <NewsCard key={item.id} item={item} />
                       ))}
-                      {pageNews.length >= 3 && adCampaign && (
-                        <NewsAdCard campaign={adCampaign} />
+                      {pageNews.length >= 1 && adCampaigns[1] && (
+                        <NewsAdCard campaign={adCampaigns[1]} />
                       )}
-                      {pageNews.slice(3).map((item) => (
+                      {pageNews.slice(1, 4).map((item) => (
+                        <NewsCard key={item.id} item={item} />
+                      ))}
+                      {pageNews.length >= 4 && adCampaigns[2] && (
+                        <NewsAdCard campaign={adCampaigns[2]} />
+                      )}
+                      {pageNews.slice(4).map((item) => (
                         <NewsCard key={item.id} item={item} />
                       ))}
                     </div>
