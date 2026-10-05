@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import CareersPage from "./pages/CareersPage";
 import ContactPage from "./pages/ContactPage";
 import EcosystemPage from "./pages/EcosystemPage";
@@ -40,6 +41,7 @@ export default function App() {
         <Page />
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
