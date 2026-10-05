@@ -24,7 +24,7 @@ const englishTranslations: Record<string, string> = {
   "Một tầm nhìn.": "One vision.",
   "Chúng tôi là ai?": "Who are we?",
   "Matrix Holding là doanh nghiệp hoạt động trong lĩnh vực đầu tư và phát triển hệ sinh thái kinh doanh đa ngành tại Việt Nam. Hướng đến mục tiêu đưa các doanh nghiệp tiềm năng trở thành kỳ lân trong lĩnh vực, chúng tôi cam kết sẽ không ngừng nỗ lực, phát huy sự sáng tạo nhằm đưa ra giải pháp phù hợp với nhu cầu của từng doanh nghiệp.":
-  "Matrix Holding is a Vietnam-based investment group developing a diversified business ecosystem and connecting companies and resources for long-term growth.",
+    "Matrix Holding is a Vietnam-based investment group developing a diversified business ecosystem and connecting companies and resources for long-term growth.",
   "Chúng tôi làm gì?": "What do we do?",
   "Chúng tôi tập trung xây dựng một môi trường kinh doanh hiệu quả, nơi các doanh nghiệp có thể tiếp cận với nhiều nguồn lực và mở ra cơ hội tiếp cận thị trường bền vững.":
   "We focus on building an effective business environment where companies can access resources and open up opportunities for sustainable market access.",
@@ -500,6 +500,10 @@ const englishTranslations: Record<string, string> = {
   "Matrix Holding.": "Matrix Holding.",
   "Cập nhật những thông tin, hoạt động và dấu mốc mới nhất.":
     "The latest updates, initiatives, and milestones.",
+  "Tòa nhà văn phòng hiện đại giữa khu đô thị":
+    "A modern office building in an urban district",
+  "Kết nối nguồn lực, kiến tạo giá trị dài hạn":
+    "Connecting resources to create long-term value",
   "Tin mẫu: Định hướng phát triển hệ sinh thái": "Sample story: Growing the ecosystem",
   "Bài viết minh họa cách giới thiệu định hướng phát triển và các lĩnh vực hoạt động của Matrix Holding.":
     "An illustrative article introducing Matrix Holding's growth outlook and business sectors.",

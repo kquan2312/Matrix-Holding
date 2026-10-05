@@ -14,12 +14,19 @@ export default function HomeAboutPreview() {
         </div>
 
         <div className="home-about-preview-layout">
-          <h2>{t("Một hệ sinh thái kết nối nguồn lực và cơ hội phát triển.")}</h2>
+          <div className="home-about-preview-copy">
+            <h2>{t("Một hệ sinh thái kết nối nguồn lực và cơ hội phát triển.")}</h2>
+          </div>
 
           <div>
-            <p>
-              {t("Matrix Holding kết nối các hệ sinh thái chuyên biệt, doanh nghiệp và nguồn lực nhằm mở rộng cơ hội hợp tác, phát triển dài hạn.")}
-            </p>
+            <div className="home-about-preview-image">
+              <img
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85"
+                alt={t("Tòa nhà văn phòng hiện đại giữa khu đô thị")}
+                loading="lazy"
+              />
+              <span>{t("Kết nối nguồn lực, kiến tạo giá trị dài hạn")}</span>
+            </div>
 
             <div className="home-about-preview-actions">
               <a href="/gioi-thieu" className="text-link">
