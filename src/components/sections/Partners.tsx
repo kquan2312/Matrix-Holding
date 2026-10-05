@@ -52,13 +52,36 @@ export default function Partners({ preview = false }: { preview?: boolean }) {
             </div>
           </div>
         ) : (
-          <div className="partners-name-list">
-            {visiblePartners.map((partner) => (
-              <div className="partner-name" key={partner.id}>
-                {partner.name}
+          <>
+            {preview ? (
+              <div className="partners-name-list">
+                {visiblePartners.map((partner) => (
+                  <div className="partner-name" key={partner.id}>
+                    {partner.name}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            ) : (
+              <div className="partners-name-marquee">
+                <div className="partners-name-track">
+                  <div className="partners-name-group">
+                    {partners.map((partner) => (
+                      <div className="partner-name" key={partner.id}>
+                        {partner.name}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="partners-name-group" aria-hidden="true">
+                    {partners.map((partner) => (
+                      <div className="partner-name" key={partner.id}>
+                        {partner.name}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+          </>
         )}
 
         {preview && (

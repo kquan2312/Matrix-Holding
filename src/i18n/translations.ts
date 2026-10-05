@@ -7,6 +7,7 @@ const englishTranslations: Record<string, string> = {
   "Năng lực": "Capabilities",
   "Tin tức": "News",
   "Liên hệ": "Contact",
+  "Lên đầu trang": "Back to top",
   "Mở menu": "Open menu",
   "Đóng menu": "Close menu",
   "TẬP ĐOÀN KINH DOANH ĐA NGÀNH": "DIVERSIFIED BUSINESS GROUP",

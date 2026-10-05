@@ -1,4 +1,5 @@
-import type { ComponentType } from "react";
+import { ArrowUp } from "lucide-react";
+import { useEffect, useState, type ComponentType } from "react";
 import CareersPage from "./pages/CareersPage";
 import ContactPage from "./pages/ContactPage";
 import EcosystemPage from "./pages/EcosystemPage";
@@ -10,6 +11,7 @@ import NewsPage from "./pages/NewsPage";
 import Footer from "./components/layout/Footer";
 import Header from "./components/layout/Header";
 import useScrollReveal from "./hooks/useScrollReveal";
+import { useLanguage } from "./i18n/LanguageContext";
 
 const pages: Record<string, ComponentType> = {
   "/": Home,
@@ -22,6 +24,8 @@ const pages: Record<string, ComponentType> = {
 
 export default function App() {
   useScrollReveal();
+  const { t } = useLanguage();
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
   const route = pathname === "/index.html" ? "/" : pathname;
@@ -33,6 +37,38 @@ export default function App() {
       ? EcosystemBrandPage
       : pages[route] ?? Home;
 
+  useEffect(() => {
+    if (window.location.hash !== "#partners") {
+      return;
+    }
+
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById("partners")?.scrollIntoView({ block: "start" });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [route]);
+
+  useEffect(() => {
+    const updateScrollButton = () => {
+      setShowScrollToTop(window.scrollY > 500);
+    };
+
+    updateScrollButton();
+    window.addEventListener("scroll", updateScrollButton, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollButton);
+  }, []);
+
+  const scrollToTop = () => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    window.scrollTo({
+      top: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+  };
+
   return (
     <>
       <Header />
@@ -40,6 +76,16 @@ export default function App() {
         <Page />
       </main>
       <Footer />
+      <button
+        type="button"
+        className={`scroll-to-top${showScrollToTop ? " is-visible" : ""}`}
+        aria-label={t("Lên đầu trang")}
+        onClick={scrollToTop}
+        tabIndex={showScrollToTop ? 0 : -1}
+        aria-hidden={!showScrollToTop}
+      >
+        <ArrowUp size={20} aria-hidden="true" />
+      </button>
     </>
   );
 }
